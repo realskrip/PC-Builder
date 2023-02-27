@@ -1,0 +1,12 @@
+﻿@model IEnumerable<PC_Builder.Models.CPU>
+
+<table class="table">
+    <tr><th>Процессор</th><th>Производитель</th></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Manufacturer</td>
+        </tr>
+    }
+</table>

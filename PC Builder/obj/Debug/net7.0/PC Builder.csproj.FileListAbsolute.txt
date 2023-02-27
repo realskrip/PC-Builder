@@ -1,0 +1,67 @@
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\appsettings.json
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\PC Builder.exe
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\PC Builder.deps.json
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\PC Builder.runtimeconfig.json
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\PC Builder.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\PC Builder.pdb
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.csproj.AssemblyReference.cache
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.AssemblyInfoInputs.cache
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.AssemblyInfo.cs
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.csproj.CoreCompileInputs.cache
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.RazorAssemblyInfo.cache
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.RazorAssemblyInfo.cs
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\staticwebassets\msbuild.PC Builder.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\staticwebassets\msbuild.build.PC Builder.props
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.PC Builder.props
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.PC Builder.props
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\scopedcss\bundle\PC Builder.styles.css
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.csproj.CopyComplete
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\refint\PC Builder.dll
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.pdb
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.genruntimeconfig.cache
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\ref\PC Builder.dll
