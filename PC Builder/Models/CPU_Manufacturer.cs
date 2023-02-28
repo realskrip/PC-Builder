@@ -1,8 +1,11 @@
-﻿namespace PC_Builder.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PC_Builder.Models
 {
     public class CPU_Manufacturer
     {
-        public int Id { get; set; }
+        [Key] 
+        public int Id_Manufacturer { get; set; }
         public string? Manufacturer { get; set; }
     }
 }
