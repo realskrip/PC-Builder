@@ -1,12 +1,20 @@
-﻿@model IEnumerable<PC_Builder.Models.CPU>
+﻿@model IEnumerable<PC_Builder.Models.CPU_Manufacturer>
 
-<table class="table">
-    <tr><th>Процессор</th><th>Производитель</th></tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.Name</td>
-            <td>@item.Manufacturer</td>
-        </tr>
-    }
-</table>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>PC Builder</title>
+    </head>
+    <body>
+        <p>Процессор</p>
+        <form>
+            <select>
+                @foreach (var item in Model)
+                {
+                    <option>@item.Manufacturer</option>
+                }
+            </select>
+        </form>
+    </body>
+</html>

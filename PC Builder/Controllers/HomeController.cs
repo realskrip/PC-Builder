@@ -15,7 +15,7 @@ namespace PC_Builder.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View(await db.CPUs.ToListAsync());
+            return View(await db.CPU_Manufacturers.ToListAsync());
         }
     }
 }
