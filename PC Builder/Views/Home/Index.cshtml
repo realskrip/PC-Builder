@@ -16,13 +16,12 @@
                 }
             </select>
         </form>
+        <br/>
         <form>
-            <select>
-                @foreach (var item in Model.CPUs)
-                {
-                    <option>@item.CPU_name</option>
-                }
-            </select>
+            @foreach (var item in Model.CPUs)
+            {
+                <p><input type="radio" name="CPU"> @item.CPU_name</p>
+            }
         </form>
     </body>
 </html>
