@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PC_Builder.Models;
+using PC_Builder.ViewModels;
 
 namespace PC_Builder.Controllers
 {
@@ -13,9 +14,12 @@ namespace PC_Builder.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public ActionResult Index() 
         {
-            return View(await db.CPU_Manufacturers.ToListAsync());
+            var cpu_manufacturers = db.CPU_Manufacturers.ToList();
+            var cpus = db.CPUs.ToList();
+            var model = new IndexViewModel { CPU_Manufacturers = cpu_manufacturers, CPUs = cpus };
+            return View(model);
         }
     }
 }

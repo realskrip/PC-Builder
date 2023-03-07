@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PC_Builder.Models.CPU_Manufacturer>
+﻿@model PC_Builder.ViewModels.IndexViewModel
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,9 +10,17 @@
         <p>Процессор</p>
         <form>
             <select>
-                @foreach (var item in Model)
+                @foreach (var item in Model.CPU_Manufacturers)
                 {
                     <option>@item.Manufacturer</option>
+                }
+            </select>
+        </form>
+        <form>
+            <select>
+                @foreach (var item in Model.CPUs)
+                {
+                    <option>@item.CPU_name</option>
                 }
             </select>
         </form>
