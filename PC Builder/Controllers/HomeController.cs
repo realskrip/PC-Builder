@@ -13,13 +13,30 @@ namespace PC_Builder.Controllers
             db = context;
         }
 
+        //[HttpGet]
+        //public IActionResult Index() 
+        //{
+        //    var cpu_manufacturers = db.CPU_Manufacturers.ToList();
+        //    var cpus = db.CPUs.ToList();
+        //    var model = new IndexViewModel { CPU_Manufacturers = cpu_manufacturers, CPUs = cpus };
+
+        //    return View(model);
+        //}
+
         [HttpGet]
-        public IActionResult Index() 
+        public IActionResult Index(int CPU_Manufacturer_Id)
         {
-            var cpu_manufacturers = db.CPU_Manufacturers.ToList();
-            var cpus = db.CPUs.ToList();
-            var model = new IndexViewModel { CPU_Manufacturers = cpu_manufacturers, CPUs = cpus };
-            return View(model);
+            List<CPU_Manufacturer> cpu_manufacturers = db.CPU_Manufacturers.ToList();
+            List<CPU> cpus = db.CPUs.ToList();
+
+            IndexViewModel viewModel = new IndexViewModel { CPU_Manufacturers = cpu_manufacturers, CPUs = cpus };
+
+            if (CPU_Manufacturer_Id != 0)
+            {
+                viewModel.CPUs = db.CPUs.Where(c => c.Id_Manufacturer == CPU_Manufacturer_Id);
+            }
+
+            return View(viewModel);
         }
     }
 }
