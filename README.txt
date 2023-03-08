@@ -10,3 +10,4 @@ Razor Pages
 Nuget
 MS SQL Server
 Entity Framework
+LINQ
