@@ -14,7 +14,7 @@ namespace PC_Builder.Controllers
         }
 
         [HttpGet]
-        public ActionResult Index() 
+        public IActionResult Index() 
         {
             var cpu_manufacturers = db.CPU_Manufacturers.ToList();
             var cpus = db.CPUs.ToList();

@@ -9,12 +9,13 @@
     <body>
         <p>Процессор</p>
         <form>
-            <select>
+            <select name="CPU_Manufacturer_Id">
                 @foreach (var item in Model.CPU_Manufacturers)
                 {
-                    <option>@item.Manufacturer</option>
+                    <option value="item.Id_Manufacturer">@item.Manufacturer</option>
                 }
             </select>
+        <input type="submit" value="Отсортировать"/>
         </form>
         <br/>
         <form>
