@@ -13,16 +13,6 @@ namespace PC_Builder.Controllers
             db = context;
         }
 
-        //[HttpGet]
-        //public IActionResult Index() 
-        //{
-        //    var cpu_manufacturers = db.CPU_Manufacturers.ToList();
-        //    var cpus = db.CPUs.ToList();
-        //    var model = new IndexViewModel { CPU_Manufacturers = cpu_manufacturers, CPUs = cpus };
-
-        //    return View(model);
-        //}
-
         [HttpGet]
         public IActionResult Index(int CPU_Manufacturer_Id)
         {

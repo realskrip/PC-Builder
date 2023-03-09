@@ -11,3 +11,4 @@ Nuget
 MS SQL Server
 Entity Framework
 LINQ
+Unit tests (MSTest)
