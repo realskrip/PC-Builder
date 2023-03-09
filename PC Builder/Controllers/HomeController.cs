@@ -19,9 +19,16 @@ namespace PC_Builder.Controllers
             List<CPU_Manufacturer> cpu_manufacturers = db.CPU_Manufacturers.ToList();
             List<CPU> cpus = db.CPUs.ToList();
 
-            IndexViewModel viewModel = new IndexViewModel { CPU_Manufacturers = cpu_manufacturers, CPUs = cpus };
 
-            if (CPU_Manufacturer_Id != 0)
+            IndexViewModel viewModel = new IndexViewModel { CPU_Manufacturers = cpu_manufacturers, CPUs = cpus };
+            
+            cpu_manufacturers.Insert(0, new CPU_Manufacturer(0, "Не выбрано"));
+
+            if (CPU_Manufacturer_Id == 0)
+            {
+                viewModel.CPUs = db.CPUs.Where(c => c.Id_Manufacturer == 0);
+            }
+            else if (CPU_Manufacturer_Id != 0)
             {
                 viewModel.CPUs = db.CPUs.Where(c => c.Id_Manufacturer == CPU_Manufacturer_Id);
             }
