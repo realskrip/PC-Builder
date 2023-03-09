@@ -7,18 +7,28 @@
         <title>PC Builder</title>
     </head>
     <body>
-        <p>Процессор</p>
+        <p>Выберите комплектующие</p>
         <form>
+            <p>Процессор</p>
             <select name="CPU_Manufacturer_Id">
                 @foreach (var item in Model.CPU_Manufacturers)
                 {
                     <option value="@item.Id_Manufacturer">@item.Manufacturer</option>
                 }
             </select>
-        <input type="submit" value="Показать"/>
+
+            <p>Охлаждение</p>
+            <select name="CoolingTypes_Id">
+                @foreach (var item in Model.CoolingTypes)
+                {
+                    <option value="@item.Id_CoolingType">@item.Name_CoolingType</option>
+                }
+            </select>
+            <input type="submit" value="Показать"/>
         </form>
         <br/>
         <form>
+            <p>Процессор</p>
             @foreach (var item in Model.CPUs)
             {
                 <p><input type="radio" name="CPU"> @item.CPU_name</p>
