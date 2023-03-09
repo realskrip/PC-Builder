@@ -33,6 +33,12 @@
             {
                 <p><input type="radio" name="CPU"> @item.CPU_name</p>
             }
+
+            <p>Охлаждение</p>
+            @foreach (var item in Model.Coolings)
+            {
+                <p><input type="radio" name="Cooling"> @item.CoolingName</p>
+            }
         </form>
     </body>
 </html>

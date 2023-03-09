@@ -19,13 +19,15 @@ namespace PC_Builder.Controllers
             List<CPU_Manufacturer> cpu_manufacturers = db.CPU_Manufacturers.ToList();
             List<CPU> cpus = db.CPUs.ToList();
             List<CoolingType> coolingtypes = db.CoolingTypes.ToList();
+            List<Cooling> coolings = db.Coolings.ToList();
 
 
-            IndexViewModel viewModel = new IndexViewModel 
+            IndexViewModel viewModel = new IndexViewModel() 
             { 
                 CPU_Manufacturers = cpu_manufacturers, 
                 CPUs = cpus,
-                CoolingTypes = coolingtypes
+                CoolingTypes = coolingtypes,
+                Coolings = coolings
             };
             
             cpu_manufacturers.Insert(0, new CPU_Manufacturer(0, "Не выбрано"));
@@ -42,11 +44,11 @@ namespace PC_Builder.Controllers
 
             if (CoolingTypes_Id == 0)
             {
-                // условие сортировки
+                viewModel.Coolings = db.Coolings.Where(c => c.Id_CoolingType == 0);
             }
             else if (CoolingTypes_Id != 0)
             {
-                // условие сортировки
+                viewModel.Coolings = db.Coolings.Where(c => c.Id_CoolingType == CoolingTypes_Id);
             }
 
             return View(viewModel);
