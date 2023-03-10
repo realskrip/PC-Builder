@@ -14,5 +14,6 @@ builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 app.MapDefaultControllerRoute();
+app.UseStaticFiles(); // поддержка обслуживания статических файлов, например css
 
 app.Run();
