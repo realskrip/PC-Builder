@@ -28,16 +28,22 @@
         </form>
         <br/>
         <form>
-            <p>Процессор</p>
-            @foreach (var item in Model.CPUs)
+            @if (ViewBag.cpuViewBag > 0)
             {
-                <p><input type="radio" name="CPU"> @item.CPU_name</p>
+                <p>Процессор</p>
+                @foreach (var item in Model.CPUs)
+                {
+                    <p><input type="radio" name="CPU"> @item.CPU_name</p>
+                }
             }
 
-            <p>Охлаждение</p>
-            @foreach (var item in Model.Coolings)
+            @if (ViewBag.coolingViewBag > 0)
             {
-                <p><input type="radio" name="Cooling"> @item.CoolingName</p>
+                <p>Охлаждение</p>
+                @foreach (var item in Model.Coolings)
+                {
+                    <p><input type="radio" name="Cooling"> @item.CoolingName</p>
+                }
             }
         </form>
     </body>
