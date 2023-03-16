@@ -8,44 +8,18 @@
         <title>PC Builder</title>
     </head>
     <body>
-        <p>Выберите комплектующие</p>
-        <form>
-            <p>Процессор</p>
-            <select name="CPU_Manufacturer_Id">
-                @foreach (var item in Model.CPU_Manufacturers)
-                {
-                    <option value="@item.Id_Manufacturer">@item.Manufacturer</option>
-                }
-            </select>
+        <p>Все товары</p>
+        <p>Процессоры</p>
+        <p>Охлаждение</p>
 
-            <p>Охлаждение</p>
-            <select name="CoolingTypes_Id">
-                @foreach (var item in Model.CoolingTypes)
-                {
-                    <option value="@item.Id_CoolingType">@item.Name_CoolingType</option>
-                }
-            </select>
-            <input type="submit" value="Показать"/>
-        </form>
-        <br/>
-        <form>
-            @if (ViewBag.cpuViewBag > 0)
-            {
-                <p>Процессор</p>
-                @foreach (var item in Model.CPUs)
-                {
-                    <p><input type="radio" name="CPU"> @item.CPU_name</p>
-                }
-            }
+        @foreach (var item in Model.CPUs)
+        {
+            <p>@item.Name</p>
+        }
 
-            @if (ViewBag.coolingViewBag > 0)
-            {
-                <p>Охлаждение</p>
-                @foreach (var item in Model.Coolings)
-                {
-                    <p><input type="radio" name="Cooling"> @item.CoolingName</p>
-                }
-            }
-        </form>
+        @foreach (var item in Model.Coolings)
+        {
+        <p>@item.Name</p>
+    }
     </body>
 </html>

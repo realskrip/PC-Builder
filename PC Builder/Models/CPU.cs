@@ -1,12 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PC_Builder.Models
 {
     public class CPU
     {
         [Key]
-        public int Id_CPU { get; set; }
-        public int Id_Manufacturer { get; set; }
-        public string? CPU_name { get; set; }
+        public int CPUId { get; set; }
+        public string? Manufacturer { get; set; }
+        public string? Name { get; set; }
+
+        [Column(TypeName = "decimal(8, 2)")]
+        public decimal Price { get; set; }
+        public string? Category { get; set; }
     }
 }
