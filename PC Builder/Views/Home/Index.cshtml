@@ -8,18 +8,22 @@
         <title>PC Builder</title>
     </head>
     <body>
-        <p>Все товары</p>
-        <p>Процессоры</p>
-        <p>Охлаждение</p>
+        <div class="sidebar">
+            <p>Все товары</p>
+            <p>Процессоры</p>
+            <p>Охлаждение</p>
+        </div>
 
-        @foreach (var item in Model.CPUs)
-        {
-            <p>@item.Name</p>
-        }
+        <div class="container">
+            @foreach (var item in Model.CPUs)
+            {
+                <p>@item.Name</p>
+            }
 
-        @foreach (var item in Model.Coolings)
-        {
-        <p>@item.Name</p>
-    }
+            @foreach (var item in Model.Coolings)
+            {
+                <p>@item.Name</p>
+            }
+        </div>
     </body>
 </html>
