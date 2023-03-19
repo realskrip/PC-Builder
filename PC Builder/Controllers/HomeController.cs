@@ -18,22 +18,32 @@ namespace PC_Builder.Controllers
         {
             List<CPU> cpus = db.CPUs.ToList();
             List<Cooling> coolings = db.Coolings.ToList();
+            List<Motherboard> motherboards = db.Motherboards.ToList();
 
 
             IndexViewModel viewModel = new IndexViewModel() 
             { 
                 CPUs = cpus,
-                Coolings = coolings
+                Coolings = coolings,
+                Motherboards = motherboards
             };
 
             if (category == "cpu")
             {
                 viewModel.Coolings = db.Coolings.Where(c => c.Category == "out of category");
+                viewModel.Motherboards = db.Motherboards.Where(m => m.Category == "out of category");
                 return View(viewModel);
             }
             else if (category == "cooling")
             {
                 viewModel.CPUs = db.CPUs.Where(c => c.Category == "out of category");
+                viewModel.Motherboards = db.Motherboards.Where(m => m.Category == "out of category");
+                return View(viewModel);
+            }
+            else if (category == "motherboard")
+            {
+                viewModel.CPUs = db.CPUs.Where(c => c.Category == "out of category");
+                viewModel.Coolings = db.Coolings.Where(c => c.Category == "out of category");
                 return View(viewModel);
             }
 
