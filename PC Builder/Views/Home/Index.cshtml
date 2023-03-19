@@ -17,12 +17,12 @@
         <div class="container">
             @foreach (var item in Model.CPUs)
             {
-                <p>@item.Name</p>
+                <p>@item.Name @item.Price руб.</p>
             }
 
             @foreach (var item in Model.Coolings)
             {
-                <p>@item.Name</p>
+                <p>@item.Name @item.Price руб.</p>
             }
         </div>
     </body>
