@@ -9,9 +9,9 @@
     </head>
     <body>
         <div class="sidebar">
-            <p>Все товары</p>
-            <p>Процессоры</p>
-            <p>Охлаждение</p>
+            <a asp-controller="Home" asp-action="Index" asp-route-category="0">Все товары</a>
+            <a asp-controller="Home" asp-action="Index" asp-route-category="cpu">Процессоры</a>
+            <a asp-controller="Home" asp-action="Index" asp-route-category="cooling">Охлаждение</a>
         </div>
 
         <div class="container">

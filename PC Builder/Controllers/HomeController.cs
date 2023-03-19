@@ -14,7 +14,7 @@ namespace PC_Builder.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(string category)
         {
             List<CPU> cpus = db.CPUs.ToList();
             List<Cooling> coolings = db.Coolings.ToList();
@@ -25,6 +25,17 @@ namespace PC_Builder.Controllers
                 CPUs = cpus,
                 Coolings = coolings
             };
+
+            if (category == "cpu")
+            {
+                viewModel.Coolings = db.Coolings.Where(c => c.Category == "out of category");
+                return View(viewModel);
+            }
+            else if (category == "cooling")
+            {
+                viewModel.CPUs = db.CPUs.Where(c => c.Category == "out of category");
+                return View(viewModel);
+            }
 
             return View(viewModel);
         }
