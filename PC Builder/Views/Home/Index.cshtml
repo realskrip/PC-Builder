@@ -13,6 +13,7 @@
             <a asp-controller="Home" asp-action="Index" asp-route-category="cpu">Процессор</a>
             <a asp-controller="Home" asp-action="Index" asp-route-category="cooling">Охлаждение</a>
             <a asp-controller="Home" asp-action="Index" asp-route-category="motherboard">Материнская плата</a>
+            <a asp-controller="Home" asp-action="Index" asp-route-category="ram">Оперативная память</a>
         </div>
 
         <div class="container">
@@ -27,6 +28,11 @@
             }
 
             @foreach (var item in Model.Motherboards)
+            {
+                <p>@item.Name @item.Price руб.</p>
+            }
+
+            @foreach (var item in Model.RAMs)
             {
                 <p>@item.Name @item.Price руб.</p>
             }
