@@ -19,6 +19,7 @@ namespace PC_Builder.Controllers
             List<Cooling> coolings = db.Coolings.ToList();
             List<Motherboard> motherboards = db.Motherboards.ToList();
             List<RAM> rams = db.RAMs.ToList();
+            List<GPU> gpus = db.GPUs.ToList();
 
 
             IndexViewModel viewModel = new IndexViewModel() 
@@ -26,8 +27,8 @@ namespace PC_Builder.Controllers
                 CPUs = cpus,
                 Coolings = coolings,
                 Motherboards = motherboards,
-                RAMs = rams
-
+                RAMs = rams,
+                GPUs = gpus
             };
 
             if (category == "cpu")
@@ -35,6 +36,7 @@ namespace PC_Builder.Controllers
                 viewModel.Coolings = db.Coolings.Where(c => c.Category == "out of category");
                 viewModel.Motherboards = db.Motherboards.Where(m => m.Category == "out of category");
                 viewModel.RAMs = db.RAMs.Where(r => r.Category == "out of category");
+                viewModel.GPUs = db.GPUs.Where(g => g.Category == "out of category");
                 return View(viewModel);
             }
             else if (category == "cooling")
@@ -42,6 +44,7 @@ namespace PC_Builder.Controllers
                 viewModel.CPUs = db.CPUs.Where(c => c.Category == "out of category");
                 viewModel.Motherboards = db.Motherboards.Where(m => m.Category == "out of category");
                 viewModel.RAMs = db.RAMs.Where(r => r.Category == "out of category");
+                viewModel.GPUs = db.GPUs.Where(g => g.Category == "out of category");
                 return View(viewModel);
             }
             else if (category == "motherboard")
@@ -49,6 +52,7 @@ namespace PC_Builder.Controllers
                 viewModel.CPUs = db.CPUs.Where(c => c.Category == "out of category");
                 viewModel.Coolings = db.Coolings.Where(c => c.Category == "out of category");
                 viewModel.RAMs = db.RAMs.Where(r => r.Category == "out of category");
+                viewModel.GPUs = db.GPUs.Where(g => g.Category == "out of category");
                 return View(viewModel);
             }
             else if (category == "ram")
@@ -56,6 +60,15 @@ namespace PC_Builder.Controllers
                 viewModel.CPUs = db.CPUs.Where(c => c.Category == "out of category");
                 viewModel.Coolings = db.Coolings.Where(c => c.Category == "out of category");
                 viewModel.Motherboards = db.Motherboards.Where(m => m.Category == "out of category");
+                viewModel.GPUs = db.GPUs.Where(g => g.Category == "out of category");
+                return View(viewModel);
+            }
+            else if (category == "gpu")
+            {
+                viewModel.CPUs = db.CPUs.Where(c => c.Category == "out of category");
+                viewModel.Coolings = db.Coolings.Where(c => c.Category == "out of category");
+                viewModel.Motherboards = db.Motherboards.Where(m => m.Category == "out of category");
+                viewModel.RAMs = db.RAMs.Where(r => r.Category == "out of category");
                 return View(viewModel);
             }
 
