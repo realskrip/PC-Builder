@@ -21,7 +21,6 @@ namespace PC_Builder.Controllers
             List<RAM> rams = db.RAMs.ToList();
             List<GPU> gpus = db.GPUs.ToList();
 
-
             IndexViewModel viewModel = new IndexViewModel() 
             { 
                 CPUs = cpus,
@@ -31,45 +30,13 @@ namespace PC_Builder.Controllers
                 GPUs = gpus
             };
 
-            if (category == "cpu")
+            if (category != null)
             {
-                viewModel.Coolings = db.Coolings.Where(c => c.Category == "out of category");
-                viewModel.Motherboards = db.Motherboards.Where(m => m.Category == "out of category");
-                viewModel.RAMs = db.RAMs.Where(r => r.Category == "out of category");
-                viewModel.GPUs = db.GPUs.Where(g => g.Category == "out of category");
-                return View(viewModel);
-            }
-            else if (category == "cooling")
-            {
-                viewModel.CPUs = db.CPUs.Where(c => c.Category == "out of category");
-                viewModel.Motherboards = db.Motherboards.Where(m => m.Category == "out of category");
-                viewModel.RAMs = db.RAMs.Where(r => r.Category == "out of category");
-                viewModel.GPUs = db.GPUs.Where(g => g.Category == "out of category");
-                return View(viewModel);
-            }
-            else if (category == "motherboard")
-            {
-                viewModel.CPUs = db.CPUs.Where(c => c.Category == "out of category");
-                viewModel.Coolings = db.Coolings.Where(c => c.Category == "out of category");
-                viewModel.RAMs = db.RAMs.Where(r => r.Category == "out of category");
-                viewModel.GPUs = db.GPUs.Where(g => g.Category == "out of category");
-                return View(viewModel);
-            }
-            else if (category == "ram")
-            {
-                viewModel.CPUs = db.CPUs.Where(c => c.Category == "out of category");
-                viewModel.Coolings = db.Coolings.Where(c => c.Category == "out of category");
-                viewModel.Motherboards = db.Motherboards.Where(m => m.Category == "out of category");
-                viewModel.GPUs = db.GPUs.Where(g => g.Category == "out of category");
-                return View(viewModel);
-            }
-            else if (category == "gpu")
-            {
-                viewModel.CPUs = db.CPUs.Where(c => c.Category == "out of category");
-                viewModel.Coolings = db.Coolings.Where(c => c.Category == "out of category");
-                viewModel.Motherboards = db.Motherboards.Where(m => m.Category == "out of category");
-                viewModel.RAMs = db.RAMs.Where(r => r.Category == "out of category");
-                return View(viewModel);
+                viewModel.CPUs = db.CPUs.Where(c => c.Category == category);
+                viewModel.Coolings = db.Coolings.Where(c => c.Category == category);
+                viewModel.Motherboards = db.Motherboards.Where(m => m.Category == category);
+                viewModel.RAMs = db.RAMs.Where(r => r.Category == category);
+                viewModel.GPUs = db.GPUs.Where(g => g.Category == category);
             }
 
             return View(viewModel);
