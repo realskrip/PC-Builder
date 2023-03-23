@@ -20,6 +20,8 @@ namespace PC_Builder.Controllers
             List<Motherboard> motherboards = db.Motherboards.ToList();
             List<RAM> rams = db.RAMs.ToList();
             List<GPU> gpus = db.GPUs.ToList();
+            List<DataStorage> dataStorages = db.DataStorages.ToList();
+            List<Case> cases = db.Cases.ToList();
 
             IndexViewModel viewModel = new IndexViewModel() 
             { 
@@ -27,7 +29,9 @@ namespace PC_Builder.Controllers
                 Coolings = coolings,
                 Motherboards = motherboards,
                 RAMs = rams,
-                GPUs = gpus
+                GPUs = gpus,
+                DataStorages = dataStorages,
+                Cases = cases
             };
 
             if (category != null)
@@ -37,6 +41,8 @@ namespace PC_Builder.Controllers
                 viewModel.Motherboards = db.Motherboards.Where(m => m.Category == category);
                 viewModel.RAMs = db.RAMs.Where(r => r.Category == category);
                 viewModel.GPUs = db.GPUs.Where(g => g.Category == category);
+                viewModel.DataStorages = db.DataStorages.Where(g => g.Category == category);
+                viewModel.Cases = db.Cases.Where(g => g.Category == category);
             }
 
             return View(viewModel);

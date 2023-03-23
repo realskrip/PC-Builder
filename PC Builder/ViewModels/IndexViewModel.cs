@@ -9,5 +9,7 @@ namespace PC_Builder.ViewModels
         public IEnumerable<Motherboard> Motherboards { get; set; } = null!;
         public IEnumerable<RAM> RAMs { get; set; } = null!;
         public IEnumerable<GPU> GPUs { get; set; } = null!;
+        public IEnumerable<DataStorage> DataStorages { get; set; } = null!;
+        public IEnumerable<Case> Cases { get; set; } = null!;
     }
 }
