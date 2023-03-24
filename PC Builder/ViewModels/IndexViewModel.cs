@@ -11,5 +11,6 @@ namespace PC_Builder.ViewModels
         public IEnumerable<GPU> GPUs { get; set; } = null!;
         public IEnumerable<DataStorage> DataStorages { get; set; } = null!;
         public IEnumerable<Case> Cases { get; set; } = null!;
+        public IEnumerable<PowerSupply> PowerSupplies { get; set; } = null!;
     }
 }
