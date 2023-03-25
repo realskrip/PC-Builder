@@ -51,7 +51,6 @@ namespace PC_Builder.Controllers
         [HttpPost]
         public IActionResult AddBasket(string product, string category)
         {
-            
             return View();
         }
     }
