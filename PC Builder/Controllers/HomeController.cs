@@ -36,19 +36,23 @@ namespace PC_Builder.Controllers
                 PowerSupplies = powerSupplies,
             };
 
-            if (category != null)
-            {
-                viewModel.CPUs = db.CPUs.Where(c => c.Category == category);
-                viewModel.Coolings = db.Coolings.Where(c => c.Category == category);
-                viewModel.Motherboards = db.Motherboards.Where(m => m.Category == category);
-                viewModel.RAMs = db.RAMs.Where(r => r.Category == category);
-                viewModel.GPUs = db.GPUs.Where(g => g.Category == category);
-                viewModel.DataStorages = db.DataStorages.Where(d => d.Category == category);
-                viewModel.Cases = db.Cases.Where(c => c.Category == category);
-                viewModel.PowerSupplies = db.PowerSupplies.Where(p => p.Category == category);
-            }
+            viewModel.CPUs = db.CPUs.Where(c => c.Category == category);
+            viewModel.Coolings = db.Coolings.Where(c => c.Category == category);
+            viewModel.Motherboards = db.Motherboards.Where(m => m.Category == category);
+            viewModel.RAMs = db.RAMs.Where(r => r.Category == category);
+            viewModel.GPUs = db.GPUs.Where(g => g.Category == category);
+            viewModel.DataStorages = db.DataStorages.Where(d => d.Category == category);
+            viewModel.Cases = db.Cases.Where(c => c.Category == category);
+            viewModel.PowerSupplies = db.PowerSupplies.Where(p => p.Category == category);
 
             return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult AddBasket(string product, string category)
+        {
+            
+            return View();
         }
     }
 }

@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="sidebar">
-            <a asp-controller="Home" asp-action="Index">Все товары</a><br/> <!--return null-->
+            <a asp-controller="Home" asp-action="Index">На главную</a><br/> <!--return null-->
             <a asp-controller="Home" asp-action="Index" asp-route-category="cpu">Процессор</a><br/>
             <a asp-controller="Home" asp-action="Index" asp-route-category="cooling">Охлаждение</a><br/>
             <a asp-controller="Home" asp-action="Index" asp-route-category="motherboard">Материнская плата</a><br/>
@@ -21,45 +21,49 @@
         </div>
 
         <div class="container">
-            @foreach (var item in Model.CPUs)
-            {
-                <p>@item.Name @item.Price руб.</p>
-            }
+            <form asp-controller="Home" asp-action="AddBasket">
+                @foreach (var item in Model.CPUs)
+                {
+                    <p><input type="radio" name="product" value="@item.Name"> @item.Name @item.Price руб.</p>
+                    <input type="hidden" name="category" value="@item.Category"/>
+                }
 
-            @foreach (var item in Model.Coolings)
-            {
-                <p>@item.Name @item.Price руб.</p>
-            }
+                @foreach (var item in Model.Coolings)
+                {
+                    <p><input type="radio" name="product">@item.Name @item.Price руб.</p>
+                }
 
-            @foreach (var item in Model.Motherboards)
-            {
-                <p>@item.Name @item.Price руб.</p>
-            }
+                @foreach (var item in Model.Motherboards)
+                {
+                    <p><input type="radio" name="product">@item.Name @item.Price руб.</p>
+                }
 
-            @foreach (var item in Model.RAMs)
-            {
-                <p>@item.Name @item.Price руб.</p>
-            }
+                @foreach (var item in Model.RAMs)
+                {
+                    <p><input type="radio" name="product">@item.Name @item.Price руб.</p>
+                }
 
-            @foreach (var item in Model.GPUs)
-            {
-                <p>@item.Name @item.Price руб.</p>
-            }
+                @foreach (var item in Model.GPUs)
+                {
+                    <p><input type="radio" name="product">@item.Name @item.Price руб.</p>
+                }
 
-            @foreach (var item in Model.DataStorages)
-            {
-                <p>@item.Name @item.Price руб.</p>
-            }
+                @foreach (var item in Model.DataStorages)
+                {
+                    <p><input type="radio" name="product">@item.Name @item.Price руб.</p>
+                }
 
-            @foreach (var item in Model.Cases)
-            {
-                <p>@item.Name @item.Price руб.</p>
-            }
+                @foreach (var item in Model.Cases)
+                {
+                    <p><input type="radio" name="product">@item.Name @item.Price руб.</p>
+                }
 
-            @foreach (var item in Model.PowerSupplies)
-            {
-                <p>@item.Name @item.Price руб.</p>
-            }
+                @foreach (var item in Model.PowerSupplies)
+                {
+                    <p><input type="radio" name="product">@item.Name @item.Price руб.</p>
+                }
+                <input type="submit" value="Добавить в корзину"/>
+            </form>
         </div>
     </body>
 </html>
