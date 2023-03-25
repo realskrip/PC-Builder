@@ -24,7 +24,7 @@ namespace PC_Builder.Controllers
             List<Case> cases = db.Cases.ToList();
             List<PowerSupply> powerSupplies = db.PowerSupplies.ToList();
 
-            IndexViewModel viewModel = new IndexViewModel() 
+            IndexViewModel indexViewModel = new IndexViewModel() 
             { 
                 CPUs = cpus,
                 Coolings = coolings,
@@ -36,16 +36,30 @@ namespace PC_Builder.Controllers
                 PowerSupplies = powerSupplies,
             };
 
-            viewModel.CPUs = db.CPUs.Where(c => c.Category == category);
-            viewModel.Coolings = db.Coolings.Where(c => c.Category == category);
-            viewModel.Motherboards = db.Motherboards.Where(m => m.Category == category);
-            viewModel.RAMs = db.RAMs.Where(r => r.Category == category);
-            viewModel.GPUs = db.GPUs.Where(g => g.Category == category);
-            viewModel.DataStorages = db.DataStorages.Where(d => d.Category == category);
-            viewModel.Cases = db.Cases.Where(c => c.Category == category);
-            viewModel.PowerSupplies = db.PowerSupplies.Where(p => p.Category == category);
+            indexViewModel.CPUs = db.CPUs.Where(c => c.Category == category);
+            indexViewModel.Coolings = db.Coolings.Where(c => c.Category == category);
+            indexViewModel.Motherboards = db.Motherboards.Where(m => m.Category == category);
+            indexViewModel.RAMs = db.RAMs.Where(r => r.Category == category);
+            indexViewModel.GPUs = db.GPUs.Where(g => g.Category == category);
+            indexViewModel.DataStorages = db.DataStorages.Where(d => d.Category == category);
+            indexViewModel.Cases = db.Cases.Where(c => c.Category == category);
+            indexViewModel.PowerSupplies = db.PowerSupplies.Where(p => p.Category == category);
 
-            return View(viewModel);
+            return View(indexViewModel);
+        }
+
+
+        [HttpGet]
+        public IActionResult Basket()
+        {
+            List<Product> products = db.Products.ToList();
+
+            BasketViewModel basketViewModel = new BasketViewModel() 
+            {
+                Products = products
+            };
+
+            return View(basketViewModel);
         }
 
 
@@ -62,7 +76,7 @@ namespace PC_Builder.Controllers
             db.Products.Add(product);
             db.SaveChanges();
 
-            return View();
+            return RedirectToAction("Basket");
         }
     }
 }
