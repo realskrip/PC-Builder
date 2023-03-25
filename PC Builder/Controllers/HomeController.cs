@@ -48,9 +48,20 @@ namespace PC_Builder.Controllers
             return View(viewModel);
         }
 
+
         [HttpPost]
-        public IActionResult AddBasket(string product, string category)
+        public IActionResult AddBasket(string name, string category, decimal price)
         {
+            Product product = new Product()
+            {
+                Name = name,
+                Category = category,
+                Price = price
+            };
+
+            db.Products.Add(product);
+            db.SaveChanges();
+
             return View();
         }
     }
