@@ -1,0 +1,25 @@
+﻿@model PC_Builder.ViewModels.BasketViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>PC Builder</title>
+    </head>
+    <body>
+        <div>
+            <p>Корзина:</p>
+        </div>
+
+        <div>
+            <a asp-controller="Home" asp-action="Index">Вернуться</a><br />
+        </div>
+        
+        <div>
+            @foreach (var item in Model.Products)
+            {
+                <p>@item.Name @item.Price руб.</p>
+            }
+        </div>
+    </body>
+</html>

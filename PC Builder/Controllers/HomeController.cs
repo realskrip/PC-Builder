@@ -49,20 +49,6 @@ namespace PC_Builder.Controllers
         }
 
 
-        [HttpGet]
-        public IActionResult Basket()
-        {
-            List<Product> products = db.Products.ToList();
-
-            BasketViewModel basketViewModel = new BasketViewModel() 
-            {
-                Products = products
-            };
-
-            return View(basketViewModel);
-        }
-
-
         [HttpPost]
         public IActionResult AddBasket(string name, string category, decimal price)
         {
@@ -76,7 +62,7 @@ namespace PC_Builder.Controllers
             db.Products.Add(product);
             db.SaveChanges();
 
-            return RedirectToAction("Basket");
+            return RedirectToAction("Basket", "Basket");
         }
     }
 }
