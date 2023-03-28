@@ -25,5 +25,21 @@ namespace PC_Builder.Controllers
 
             return View(basketViewModel);
         }
+
+        [HttpPost]
+        public IActionResult RemoveCart(Guid? ProductId)
+        {
+            if (ProductId != null)
+            {
+                Product? product = db.Products.FirstOrDefault(p => p.ProductId == ProductId);
+
+                if (product != null)
+                {
+                    db.Products.Remove(product);
+                    db.SaveChanges();
+                }
+            }
+            return RedirectToAction("Basket");
+        }
     }
 }
