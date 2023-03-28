@@ -7,7 +7,7 @@ namespace PC_Builder.Models
     public class CPU
     {
         [Key]
-        public int CPUId { get; set; }
+        public Guid CPUId { get; set; }
         public string? Manufacturer { get; set; }
         public string? Name { get; set; }
 

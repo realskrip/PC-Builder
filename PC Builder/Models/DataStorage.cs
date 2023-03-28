@@ -7,7 +7,7 @@ namespace PC_Builder.Models
     public class DataStorage
     {
         [Key]
-        public int DataStorageId { get; set; }
+        public Guid DataStorageId { get; set; }
         public string? Name { get; set; }
 
         [Column(TypeName = "decimal(8, 2)")]

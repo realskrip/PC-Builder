@@ -7,7 +7,7 @@ namespace PC_Builder.Models
     public class Motherboard
     {
         [Key]
-        public int MotherboardId { get; set; }
+        public Guid MotherboardId { get; set; }
         public string? Name { get; set; }
 
         [Column(TypeName = "decimal(8, 2)")]

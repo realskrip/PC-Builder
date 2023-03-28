@@ -7,7 +7,7 @@ namespace PC_Builder.Models
     public class RAM
     {
         [Key]
-        public int RAMId { get; set; }
+        public Guid RAMId { get; set; }
         public string? Name { get; set; }
 
         [Column(TypeName = "decimal(8, 2)")]

@@ -7,7 +7,7 @@ namespace PC_Builder.Models
     public class Cooling
     {
         [Key]
-        public int CoolingId { get; set; }
+        public Guid CoolingId { get; set; }
         public string? Name { get; set; }
 
         [Column(TypeName = "decimal(8, 2)")]

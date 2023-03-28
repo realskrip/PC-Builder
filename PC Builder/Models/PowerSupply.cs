@@ -7,7 +7,7 @@ namespace PC_Builder.Models
     public class PowerSupply
     {
         [Key]
-        public int PowerSupplyId { get; set; }
+        public Guid PowerSupplyId { get; set; }
         public string? Name { get; set; }
 
         [Column(TypeName = "decimal(8, 2)")]

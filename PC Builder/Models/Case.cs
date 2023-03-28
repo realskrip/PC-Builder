@@ -7,7 +7,7 @@ namespace PC_Builder.Models
     public class Case
     {
         [Key]
-        public int CaseId { get; set; }
+        public Guid CaseId { get; set; }
         public string? Name { get; set; }
 
         [Column(TypeName = "decimal(8, 2)")]

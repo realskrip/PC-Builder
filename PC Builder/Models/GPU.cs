@@ -7,7 +7,7 @@ namespace PC_Builder.Models
     public class GPU
     {
         [Key]
-        public int GPUId { get; set; }
+        public Guid GPUId { get; set; }
         public string? Name { get; set; }
 
         [Column(TypeName = "decimal(8, 2)")]
