@@ -50,12 +50,11 @@ namespace PC_Builder.Controllers
 
 
         [HttpPost]
-        public IActionResult AddBasket(string name, string category, decimal price)
+        public IActionResult AddBasket(string name, decimal price)
         {
             Product product = new Product()
             {
                 Name = name,
-                Category = category,
                 Price = price
             };
 
