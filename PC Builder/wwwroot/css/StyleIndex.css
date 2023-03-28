@@ -1,9 +1,15 @@
 ﻿body {
     background-color: #f1df78;
 }
+
 div {
     border: 1px solid black;
 }
+
+.header {
+    text-align: center;
+}
+
 .sidebar {
     background-color: #f6da33;
     float: left;
@@ -12,7 +18,4 @@ div {
     min-width: 100px;
     min-height: 700px;
     padding-left: 10px;
-}
-.container {
-
 }
