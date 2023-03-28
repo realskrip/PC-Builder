@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleBasket.css",
+      "PackagePath": "staticwebassets\\css\\StyleBasket.css"
+    },
+    {
       "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleCompletePC.css",
       "PackagePath": "staticwebassets\\css\\StyleCompletePC.css"
     },
