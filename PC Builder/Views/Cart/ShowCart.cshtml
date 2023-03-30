@@ -1,0 +1,23 @@
+﻿@model PC_Builder.ViewModels.CartViewModel
+
+<div class="header">
+    <p>Корзина</p>
+</div>
+
+<div>
+    <table>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>
+                    <p>@item.Name @item.Price руб.</p>
+                </td>
+                <td>
+                    <form asp-controller="Cart" asp-action="RemoveCart" asp-route-ProductId="@item.ProductId">
+                        <input type="submit" value="Удалить" />
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

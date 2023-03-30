@@ -16,8 +16,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Basket/Basket.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFza2V0XEJhc2tldC5jc2h0bWw=
+[C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Cart/ShowCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxTaG93Q2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Configurator/CompletePC.cshtml]

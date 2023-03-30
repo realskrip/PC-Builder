@@ -50,7 +50,7 @@ namespace PC_Builder.Controllers
 
 
         [HttpPost]
-        public IActionResult AddBasket(string name, decimal price)
+        public IActionResult AddCart(string name, decimal price)
         {
             price /= 100; //TODO: Why two extra numbers??!
             Product product = new Product()
@@ -62,7 +62,7 @@ namespace PC_Builder.Controllers
             db.Products.Add(product);
             db.SaveChanges();
 
-            return RedirectToAction("Basket", "Basket");
+            return RedirectToAction("ShowCart", "Cart");
         }
     }
 }
