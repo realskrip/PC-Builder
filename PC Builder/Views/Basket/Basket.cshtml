@@ -1,37 +1,23 @@
 ﻿@model PC_Builder.ViewModels.BasketViewModel
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="/css/StyleBasket.css">
-        <title>PC Builder</title>
-    </head>
-    <body>
-        <div class="header">
-            <p>Корзина</p>
-        </div>
+<div class="header">
+    <p>Корзина</p>
+</div>
 
-        <div class="sidebar">
-            <a asp-controller="Home" asp-action="Index">Вернуться</a><br />
-        </div>
-        
-        <div>
-            <table>
-                @foreach (var item in Model.Products)
-                {
-                    <tr>
-                        <td>
-                            <p>@item.Name @item.Price руб.</p>
-                        </td>
-                        <td>
-                            <form asp-controller="Basket" asp-action="RemoveCart" asp-route-ProductId="@item.ProductId">
-                                <input type="submit" value="Удалить"/>
-                            </form>
-                        </td>
-                    </tr>
-                }
-            </table>
-        </div>
-    </body>
-</html>
+<div>
+    <table>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>
+                    <p>@item.Name @item.Price руб.</p>
+                </td>
+                <td>
+                    <form asp-controller="Basket" asp-action="RemoveCart" asp-route-ProductId="@item.ProductId">
+                        <input type="submit" value="Удалить" />
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

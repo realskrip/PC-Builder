@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "b3pRTocQyvjfFU9BWXF8wjsFfB7gUF6RJ6hW5VgLRls=",
+  "Hash": "Fc9ViR4c3f61sKZhDURXM2C0KZj7KWNaLlmd9xOtusw=",
   "Source": "PC Builder",
   "BasePath": "_content/PC Builder",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleBasket.css",
+      "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleLayout.css",
       "SourceId": "PC Builder",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\",
       "BasePath": "_content/PC Builder",
-      "RelativePath": "css/StyleBasket.css",
+      "RelativePath": "css/StyleLayout.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,41 +31,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\StyleBasket.css"
-    },
-    {
-      "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleCompletePC.css",
-      "SourceId": "PC Builder",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\",
-      "BasePath": "_content/PC Builder",
-      "RelativePath": "css/StyleCompletePC.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\StyleCompletePC.css"
-    },
-    {
-      "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleIndex.css",
-      "SourceId": "PC Builder",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\",
-      "BasePath": "_content/PC Builder",
-      "RelativePath": "css/StyleIndex.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\StyleIndex.css"
+      "OriginalItemSpec": "wwwroot\\css\\StyleLayout.css"
     }
   ]
 }

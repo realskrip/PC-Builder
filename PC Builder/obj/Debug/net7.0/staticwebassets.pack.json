@@ -1,16 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleBasket.css",
-      "PackagePath": "staticwebassets\\css\\StyleBasket.css"
-    },
-    {
-      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleCompletePC.css",
-      "PackagePath": "staticwebassets\\css\\StyleCompletePC.css"
-    },
-    {
-      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleIndex.css",
-      "PackagePath": "staticwebassets\\css\\StyleIndex.css"
+      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleLayout.css",
+      "PackagePath": "staticwebassets\\css\\StyleLayout.css"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.PC Builder.Microsoft.AspNetCore.StaticWebAssets.props",

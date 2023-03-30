@@ -1,76 +1,54 @@
 ﻿@model PC_Builder.ViewModels.ConfiguratorViewModel
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/StyleCompletePC.css">
-    <title>PC Builder</title>
-</head>
-<body>
-    <div class="sidebar">
-        <a asp-controller="Home" asp-action="Index">На главную</a><br /> <!--return null-->
-        <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="cpu">Процессор</a><br />
-        <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="cooling">Охлаждение</a><br />
-        <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="motherboard">Материнская плата</a><br />
-        <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="ram">Оперативная память</a><br />
-        <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="gpu">Видеокарта</a><br />
-        <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="datastorage">Хранилище данных</a><br />
-        <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="case">Корпус</a><br />
-        <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="powersupply">Блок питания</a><br />
-    </div>
+<div class="container">
+    <form asp-controller="Configurator" asp-action="AddBasket">
+        @foreach (var item in Model.CPUs)
+        {
+            <p><input type="radio" name="name" value="@item.Name" required> @item.Name @item.Price руб.</p>
+            <input type="hidden" name="price" value="@item.Price" />
+        }
 
-    <div class="container">
-        <form asp-controller="Configurator" asp-action="AddBasket">
-            @foreach (var item in Model.CPUs)
-            {
-                <p><input type="radio" name="name" value="@item.Name" required> @item.Name @item.Price руб.</p>
-                <input type="hidden" name="price" value="@item.Price" />
-            }
+        @foreach (var item in Model.Coolings)
+        {
+            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
+            <input type="hidden" name="price" value="@item.Price" />
+        }
 
-            @foreach (var item in Model.Coolings)
-            {
-                <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-                <input type="hidden" name="price" value="@item.Price" />
-            }
+        @foreach (var item in Model.Motherboards)
+        {
+            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
+            <input type="hidden" name="price" value="@item.Price" />
+        }
 
-            @foreach (var item in Model.Motherboards)
-            {
-                <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-                <input type="hidden" name="price" value="@item.Price" />
-            }
+        @foreach (var item in Model.RAMs)
+        {
+            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
+            <input type="hidden" name="price" value="@item.Price" />
+        }
 
-            @foreach (var item in Model.RAMs)
-            {
-                <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-                <input type="hidden" name="price" value="@item.Price" />
-            }
+        @foreach (var item in Model.GPUs)
+        {
+            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
+            <input type="hidden" name="price" value="@item.Price" />
+        }
 
-            @foreach (var item in Model.GPUs)
-            {
-                <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-                <input type="hidden" name="price" value="@item.Price" />
-            }
+        @foreach (var item in Model.DataStorages)
+        {
+            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
+            <input type="hidden" name="price" value="@item.Price" />
+        }
 
-            @foreach (var item in Model.DataStorages)
-            {
-                <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-                <input type="hidden" name="price" value="@item.Price" />
-            }
+        @foreach (var item in Model.Cases)
+        {
+            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
+            <input type="hidden" name="price" value="@item.Price" />
+        }
 
-            @foreach (var item in Model.Cases)
-            {
-                <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-                <input type="hidden" name="price" value="@item.Price" />
-            }
-
-            @foreach (var item in Model.PowerSupplies)
-            {
-                <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-                <input type="hidden" name="price" value="@item.Price" />
-            }
-            <input type="submit" value="Добавить в корзину" />
-        </form>
-    </div>
-</body>
-</html>
+        @foreach (var item in Model.PowerSupplies)
+        {
+            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
+            <input type="hidden" name="price" value="@item.Price" />
+        }
+        <input type="submit" value="Добавить в корзину" />
+    </form>
+</div>
