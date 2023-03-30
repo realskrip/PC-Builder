@@ -52,6 +52,7 @@ namespace PC_Builder.Controllers
         [HttpPost]
         public IActionResult AddBasket(string name, decimal price)
         {
+            price /= 100; //TODO: Why two extra numbers??!
             Product product = new Product()
             {
                 Name = name,

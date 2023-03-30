@@ -1,54 +1,131 @@
 ﻿@model PC_Builder.ViewModels.ConfiguratorViewModel
 
 <div class="container">
-    <form asp-controller="Configurator" asp-action="AddBasket">
+    <table>
         @foreach (var item in Model.CPUs)
         {
-            <p><input type="radio" name="name" value="@item.Name" required> @item.Name @item.Price руб.</p>
-            <input type="hidden" name="price" value="@item.Price" />
+            <tr>
+                <td>
+                    <p>@item.Name @item.Price руб.</p>
+                </td>
+                <td>
+                    <form asp-controller="Configurator" asp-action="AddBasket" asp-route-name="@item.Name" asp-route-price="@item.Price">
+                        <input type="submit" value="Добавить в корзину" />
+                    </form>
+                </td>
+            </tr>
         }
+    </table>
 
+    <table>
         @foreach (var item in Model.Coolings)
         {
-            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-            <input type="hidden" name="price" value="@item.Price" />
+            <tr>
+                <td>
+                    <p>@item.Name @item.Price руб.</p>
+                </td>
+                <td>
+                    <form asp-controller="Configurator" asp-action="AddBasket" asp-route-name="@item.Name" asp-route-price="@item.Price">
+                        <input type="submit" value="Добавить в корзину" />
+                    </form>
+                </td>
+            </tr>
         }
+    </table>
 
+    <table>
         @foreach (var item in Model.Motherboards)
         {
-            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-            <input type="hidden" name="price" value="@item.Price" />
+            <tr>
+                <td>
+                    <p>@item.Name @item.Price руб.</p>
+                </td>
+                <td>
+                    <form asp-controller="Configurator" asp-action="AddBasket" asp-route-name="@item.Name" asp-route-price="@item.Price">
+                        <input type="submit" value="Добавить в корзину" />
+                    </form>
+                </td>
+            </tr>
         }
+    </table>
 
+    <table>
         @foreach (var item in Model.RAMs)
         {
-            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-            <input type="hidden" name="price" value="@item.Price" />
+            <tr>
+                <td>
+                    <p>@item.Name @item.Price руб.</p>
+                </td>
+                <td>
+                    <form asp-controller="Configurator" asp-action="AddBasket" asp-route-name="@item.Name" asp-route-price="@item.Price">
+                        <input type="submit" value="Добавить в корзину" />
+                    </form>
+                </td>
+            </tr>
         }
+    </table>
 
+    <table>
         @foreach (var item in Model.GPUs)
         {
-            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-            <input type="hidden" name="price" value="@item.Price" />
+            <tr>
+                <td>
+                    <p>@item.Name @item.Price руб.</p>
+                </td>
+                <td>
+                    <form asp-controller="Configurator" asp-action="AddBasket" asp-route-name="@item.Name" asp-route-price="@item.Price">
+                        <input type="submit" value="Добавить в корзину" />
+                    </form>
+                </td>
+            </tr>
         }
+    </table>
 
+    <table>
         @foreach (var item in Model.DataStorages)
         {
-            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-            <input type="hidden" name="price" value="@item.Price" />
+            <tr>
+                <td>
+                    <p>@item.Name @item.Price руб.</p>
+                </td>
+                <td>
+                    <form asp-controller="Configurator" asp-action="AddBasket" asp-route-name="@item.Name" asp-route-price="@item.Price">
+                        <input type="submit" value="Добавить в корзину" />
+                    </form>
+                </td>
+            </tr>
         }
+    </table>
 
+    <table>
         @foreach (var item in Model.Cases)
         {
-            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-            <input type="hidden" name="price" value="@item.Price" />
+            <tr>
+                <td>
+                    <p>@item.Name @item.Price руб.</p>
+                </td>
+                <td>
+                    <form asp-controller="Configurator" asp-action="AddBasket" asp-route-name="@item.Name" asp-route-price="@item.Price">
+                        <input type="submit" value="Добавить в корзину" />
+                    </form>
+                </td>
+            </tr>
         }
+    </table>
 
+    <table>
         @foreach (var item in Model.PowerSupplies)
         {
-            <p><input type="radio" name="name" value="@item.Name" required>@item.Name @item.Price руб.</p>
-            <input type="hidden" name="price" value="@item.Price" />
+            <tr>
+                <td>
+                    <p>@item.Name @item.Price руб.</p>
+                </td>
+                <td>
+                    <form asp-controller="Configurator" asp-action="AddBasket" asp-route-name="@item.Name" asp-route-price="@item.Price">
+                        <input type="submit" value="Добавить в корзину" />
+                    </form>
+                </td>
+            </tr>
         }
-        <input type="submit" value="Добавить в корзину" />
-    </form>
+    </table>
 </div>
