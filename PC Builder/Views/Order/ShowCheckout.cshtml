@@ -1,0 +1,30 @@
+﻿<div>
+    <p>Оформить заказ сейчас</p>
+</div>
+
+<div>
+    <p>Пожалуйста, введите ваши данные, и мы сразу же отправим ваш товар!</p>
+</div>
+
+<div>
+    <form asp-controller="Order" asp-action="Checkout">
+        <p>ФИО</p>
+        <input type="text" />
+        <p>Адрес</p>
+        <p>Страна</p>
+        <input type="text" />
+        <p>Город</p>
+        <input type="text" />
+        <p>Улица</p>
+        <input type="text" />
+        <p>Дом</p>
+        <input type="text" />
+        <p>Квартира</p>
+        <input type="text" />
+        <p>Телефон</p>
+        <input type="tel" />
+        <p>Опции</p>
+        <p>Требуется сборка ПК? <input type="checkbox" /></p>
+        <input type="submit" value="Оформить заказ" />
+    </form>
+</div>

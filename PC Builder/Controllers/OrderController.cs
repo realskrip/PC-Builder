@@ -13,6 +13,12 @@ namespace PC_Builder.Controllers
         }
 
         [HttpGet]
+        public IActionResult ShowCheckout()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public IActionResult Checkout()
         {
             return View();
