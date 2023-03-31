@@ -5,5 +5,6 @@ namespace PC_Builder.ViewModels
     public class CartViewModel
     {
         public IEnumerable<Product> Products { get; set; } = null!;
+        public decimal? Total { get; set; }
     }
 }

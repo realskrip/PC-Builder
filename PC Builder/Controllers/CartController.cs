@@ -16,11 +16,19 @@ namespace PC_Builder.Controllers
         [HttpGet]
         public IActionResult ShowCart()
         {
+            decimal? total = 0;
+
             List<Product> products = db.Products.ToList();
+
+            foreach (var item in products)
+            {
+                total += item.Price;
+            }
 
             CartViewModel cartViewModel = new CartViewModel()
             {
-                Products = products
+                Products = products,
+                Total = total
             };
 
             return View(cartViewModel);
