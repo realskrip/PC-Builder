@@ -13,14 +13,16 @@ namespace PC_Builder.Controllers
         }
 
         [HttpGet]
-        public IActionResult ShowCheckout()
+        public IActionResult Checkout()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Checkout()
+        public IActionResult Order(Order order)
         {
+            db.Orders.Add(order);
+            db.SaveChanges();
             return View();
         }
     }

@@ -14,6 +14,7 @@ namespace PC_Builder.Models
         public DbSet<Case> Cases { get; set; } = null!;
         public DbSet<PowerSupply> PowerSupplies { get; set; } = null!;
         public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
         public ApplicationContext(DbContextOptions<ApplicationContext> options): base(options)
         {
             Database.EnsureCreated();   // создаем базу данных при первом обращении

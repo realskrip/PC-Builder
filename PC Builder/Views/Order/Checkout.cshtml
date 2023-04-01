@@ -1,12 +1,45 @@
-﻿<div>
-    <p>Спасибо!</p>
-</div>
+﻿@model PC_Builder.Models.Order
+
 <div>
-    <p>Спасибо за размещение заказа #</p>
+    <p>Оформить заказ сейчас</p>
 </div>
+
 <div>
-    <p>Мы отправим ваш заказ как можно скорее!</p>
+    <p>Пожалуйста, введите ваши данные, и мы сразу же отправим ваш товар!</p>
 </div>
+
 <div>
-    <a asp-controller="Home" asp-action="Index">Вернуться в магазин</a>
+    <form asp-controller="Order" asp-action="Order">
+        <p>
+            <label asp-for="FullName">ФИО</label><br />
+            <input type="text" asp-for="FullName"/>
+        </p>
+        <p>Адрес</p>
+        <p>
+            <label asp-for="Country">Страна</label><br />
+            <input type="text" asp-for="Country"/>
+        </p>
+        <p>
+            <label asp-for="City">Город</label><br />
+            <input type="text" asp-for="City"/>
+        </p>
+        <p>
+            <label asp-for="Street">Улица</label><br />
+            <input type="text" asp-for="Street"/>
+        </p>
+        <p>
+            <label asp-for="HouseNumber">Дом</label><br />
+            <input type="text" asp-for="HouseNumber"/>
+        </p>
+        <p>
+            <label asp-for="ApartmentNumber">Квартира</label><br />
+            <input type="text" asp-for="ApartmentNumber"/>
+        </p>
+        <p>
+            <label asp-for="PhoneNumber">Номер телефона</label><br />
+            <input type="text" asp-for="PhoneNumber"/>
+        </p>
+        <br />
+        <input type="submit" value="Оформить заказ" />
+    </form>
 </div>
