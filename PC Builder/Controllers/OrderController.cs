@@ -14,9 +14,16 @@ namespace PC_Builder.Controllers
         }
 
         [HttpGet]
-        public IActionResult Checkout()
+        public IActionResult Checkout(decimal total)
         {
-            return View();
+            if (total == 0)
+            {
+                return View("ErrorEmtyCart");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         [HttpPost]
@@ -30,7 +37,7 @@ namespace PC_Builder.Controllers
             order.Products = productsToJSON;
 
             db.Orders.Add(order);
-            
+
             foreach (var item in products)
             {
                 db.Products.Remove(item);
