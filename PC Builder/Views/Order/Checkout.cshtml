@@ -12,32 +12,32 @@
     <form asp-controller="Order" asp-action="Order">
         <p>
             <label asp-for="FullName">ФИО</label><br />
-            <input type="text" asp-for="FullName"/>
+            <input type="text" asp-for="FullName" required />
         </p>
         <p>Адрес</p>
         <p>
             <label asp-for="Country">Страна</label><br />
-            <input type="text" asp-for="Country"/>
+            <input type="text" asp-for="Country" required />
         </p>
         <p>
             <label asp-for="City">Город</label><br />
-            <input type="text" asp-for="City"/>
+            <input type="text" asp-for="City" required />
         </p>
         <p>
             <label asp-for="Street">Улица</label><br />
-            <input type="text" asp-for="Street"/>
+            <input type="text" asp-for="Street" required />
         </p>
         <p>
             <label asp-for="HouseNumber">Дом</label><br />
-            <input type="text" asp-for="HouseNumber"/>
+            <input type="text" asp-for="HouseNumber" required />
         </p>
         <p>
             <label asp-for="ApartmentNumber">Квартира</label><br />
-            <input type="text" asp-for="ApartmentNumber"/>
+            <input type="text" asp-for="ApartmentNumber" required />
         </p>
         <p>
             <label asp-for="PhoneNumber">Номер телефона</label><br />
-            <input type="text" asp-for="PhoneNumber"/>
+            <input type="text" asp-for="PhoneNumber" required />
         </p>
         <br />
         <input type="submit" value="Оформить заказ" />

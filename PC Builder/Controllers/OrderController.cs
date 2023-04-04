@@ -29,8 +29,6 @@ namespace PC_Builder.Controllers
 
             order.Products = productsToJSON;
 
-            // debagLog Console.WriteLine(productsToJSON);
-
             db.Orders.Add(order);
             
             foreach (var item in products)
