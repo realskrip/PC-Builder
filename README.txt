@@ -1,6 +1,6 @@
 Исползуемые технологии:
 C#
-.net 7
+.net
 ASP.NET Core MVC
 Git
 HTML
@@ -11,4 +11,5 @@ Nuget
 MS SQL Server
 Entity Framework
 LINQ
+JSON
 Unit tests (MSTest)

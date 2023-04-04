@@ -50,12 +50,13 @@ namespace PC_Builder.Controllers
 
 
         [HttpPost]
-        public IActionResult AddCart(string name, decimal price)
+        public IActionResult AddCart(string name, decimal price, string category)
         {
             Product product = new Product()
             {
                 Name = name,
-                Price = price
+                Price = price,
+                Category = category
             };
 
             db.Products.Add(product);

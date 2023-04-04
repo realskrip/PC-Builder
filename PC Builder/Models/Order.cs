@@ -15,5 +15,6 @@ namespace PC_Builder.Models
         public string? HouseNumber { get; set;}
         public string? ApartmentNumber { get; set; }
         public string? PhoneNumber { get; set; }
+        public string? Products { get; set; }
     }
 }

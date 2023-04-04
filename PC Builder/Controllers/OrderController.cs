@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PC_Builder.Models;
 using PC_Builder.ViewModels;
+using System.Text.Json;
 
 namespace PC_Builder.Controllers
 {
@@ -21,7 +22,22 @@ namespace PC_Builder.Controllers
         [HttpPost]
         public IActionResult Order(Order order)
         {
+            string productsToJSON;
+            List<Product> products = db.Products.ToList();
+
+            productsToJSON = JsonSerializer.Serialize(products);
+
+            order.Products = productsToJSON;
+
+            // debagLog Console.WriteLine(productsToJSON);
+
             db.Orders.Add(order);
+            
+            foreach (var item in products)
+            {
+                db.Products.Remove(item);
+            }
+
             db.SaveChanges();
             return View();
         }
