@@ -4,22 +4,77 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="/css/StyleLayout.css">
         <title>PC Builder</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="sidebar">
-            <a asp-controller="Home" asp-action="Index">На главную</a><br /> <!--return null-->
-            <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="cpu">Процессор</a><br />
-            <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="cooling">Охлаждение</a><br />
-            <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="motherboard">Материнская плата</a><br />
-            <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="ram">Оперативная память</a><br />
-            <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="gpu">Видеокарта</a><br />
-            <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="datastorage">Хранилище данных</a><br />
-            <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="case">Корпус</a><br />
-            <a asp-controller="Configurator" asp-action="CompletePC" asp-route-category="powersupply">Блок питания</a><br />
-            <a asp-controller="Cart" asp-action="ShowCart">Корзина</a><br />
-        </div>
-        <div>
-            @RenderBody()
-        </div>
+        <header>
+            <div class="websiteheader">
+                <p>Конфигуратор ПК</p>
+            </div>
+        </header>
+        <section>
+            <div class="sidebar">
+                <table>
+                    <tr>
+                        <td>
+                            <a class="sidebarref" asp-controller="Home" asp-action="Index">На главную</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="cpu">Процессор</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="cooling">Охлаждение</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="motherboard">Материнская плата</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="ram">Оперативная память</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="gpu">Видеокарта</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="datastorage">Хранилище данных</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="case">Корпус</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="powersupply">Блок питания</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="sidebarref" asp-controller="Cart" asp-action="ShowCart">Корзина</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                @RenderBody()
+            </div>
+        </section>
     </body>
 </html>

@@ -7,6 +7,7 @@ namespace PC_Builder.Controllers
     public class ConfiguratorController : Controller
     {
         ApplicationContext db;
+
         public ConfiguratorController(ApplicationContext context)
         {
             db = context;
