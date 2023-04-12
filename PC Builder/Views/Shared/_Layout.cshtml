@@ -2,7 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
+
         <link rel="stylesheet" href="/css/StyleLayout.css">
+        <link rel="stylesheet" href="/css/CompletePC.css">
+
         <title>PC Builder</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,54 +22,54 @@
         </header>
         <section>
             <div class="sidebar">
-                <table>
+                <table class="sidebar">
                     <tr>
-                        <td>
+                        <td class="tdsidebar">
                             <a class="sidebarref" asp-controller="Home" asp-action="Index">На главную</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="tdsidebar">
                             <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="cpu">Процессор</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="tdsidebar">
                             <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="cooling">Охлаждение</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="tdsidebar">
                             <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="motherboard">Материнская плата</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="tdsidebar">
                             <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="ram">Оперативная память</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="tdsidebar">
                             <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="gpu">Видеокарта</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="tdsidebar">
                             <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="datastorage">Хранилище данных</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="tdsidebar">
                             <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="case">Корпус</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="tdsidebar">
                             <a class="sidebarref" asp-controller="Configurator" asp-action="CompletePC" asp-route-category="powersupply">Блок питания</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="tdsidebar">
                             <a class="sidebarref" asp-controller="Cart" asp-action="ShowCart">Корзина</a>
                         </td>
                     </tr>

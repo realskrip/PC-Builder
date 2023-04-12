@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Fc9ViR4c3f61sKZhDURXM2C0KZj7KWNaLlmd9xOtusw=",
+  "Hash": "/RdM6uFGFMUbhJpoa9Ws2A0IJXgSclUcy0dkelK1hsI=",
   "Source": "PC Builder",
   "BasePath": "_content/PC Builder",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\CompletePC.css",
+      "SourceId": "PC Builder",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\",
+      "BasePath": "_content/PC Builder",
+      "RelativePath": "css/CompletePC.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CompletePC.css"
+    },
     {
       "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleLayout.css",
       "SourceId": "PC Builder",

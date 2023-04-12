@@ -1,144 +1,144 @@
 ﻿@model PC_Builder.ViewModels.ConfiguratorViewModel
 
 <div class="container">
-    <table>
+    <table class="producttable">
         @foreach (var item in Model.CPUs)
         {
             <tr>
-                <td>
-                    <p>@item.Name @item.Price руб.</p>
+                <td class="cellname">
+                    <p class="productname">@item.Name</p>
                 </td>
-                <td>
+                <td class ="cellprice">
                     <form asp-controller="Configurator" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
-                        <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="Добавить в корзину" />
+                        <input type="hidden" name="category" value="@item.Category" />
+                        <input type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
         }
     </table>
 
-    <table>
+    <table class="producttable">
         @foreach (var item in Model.Coolings)
         {
             <tr>
-                <td>
-                    <p>@item.Name @item.Price руб.</p>
+                <td class="cellname">
+                    <p class="productname">@item.Name</p>
                 </td>
-                <td>
+                <td class="cellprice">
                     <form asp-controller="Configurator" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="Добавить в корзину" />
+                        <input type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
         }
     </table>
 
-    <table>
+    <table class="producttable">
         @foreach (var item in Model.Motherboards)
         {
             <tr>
-                <td>
-                    <p>@item.Name @item.Price руб.</p>
+                <td class="cellname">
+                    <p class="productname">@item.Name</p>
                 </td>
-                <td>
+                <td class="cellprice">
                     <form asp-controller="Configurator" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="Добавить в корзину" />
+                        <input type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
         }
     </table>
 
-    <table>
+    <table class="producttable">
         @foreach (var item in Model.RAMs)
         {
             <tr>
-                <td>
-                    <p>@item.Name @item.Price руб.</p>
+                <td class="cellname">
+                    <p class="productname">@item.Name</p>
                 </td>
-                <td>
+                <td class="cellprice">
                     <form asp-controller="Configurator" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="Добавить в корзину" />
+                        <input type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
         }
     </table>
 
-    <table>
+    <table class="producttable">
         @foreach (var item in Model.GPUs)
         {
             <tr>
-                <td>
-                    <p>@item.Name @item.Price руб.</p>
+                <td class="cellname">
+                    <p class="productname">@item.Name</p>
                 </td>
-                <td>
+                <td class="cellprice">
                     <form asp-controller="Configurator" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="Добавить в корзину" />
+                        <input type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
         }
     </table>
 
-    <table>
+    <table class="producttable">
         @foreach (var item in Model.DataStorages)
         {
             <tr>
-                <td>
-                    <p>@item.Name @item.Price руб.</p>
+                <td class="cellname">
+                    <p class="productname">@item.Name</p>
                 </td>
-                <td>
+                <td class="cellprice">
                     <form asp-controller="Configurator" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="Добавить в корзину" />
+                        <input type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
         }
     </table>
 
-    <table>
+    <table class="producttable">
         @foreach (var item in Model.Cases)
         {
             <tr>
-                <td>
-                    <p>@item.Name @item.Price руб.</p>
+                <td class="cellname">
+                    <p class="productname">@item.Name</p>
                 </td>
-                <td>
+                <td class="cellprice">
                     <form asp-controller="Configurator" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="Добавить в корзину" />
+                        <input type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
         }
     </table>
 
-    <table>
+    <table class="producttable">
         @foreach (var item in Model.PowerSupplies)
         {
             <tr>
-                <td>
-                    <p>@item.Name @item.Price руб.</p>
+                <td class="cellname">
+                    <p class="productname">@item.Name</p>
                 </td>
-                <td>
+                <td class="cellprice">
                     <form asp-controller="Configurator" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
-                            <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="Добавить в корзину" />
+                        <input type="hidden" name="category" value="@item.Category"/>
+                        <input type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>

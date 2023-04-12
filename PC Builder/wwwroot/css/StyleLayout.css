@@ -12,17 +12,11 @@ a {
     color: #a6a6a8;
 }
 
-table {
+table.sidebar {
     border-spacing: 5px;
 }
 
-th {
-    padding: 5px;
-    border: 1px solid #a6a6a8;
-    border-width: 2px;
-}
-
-td {
+td.tdsidebar {
     text-align: center;
     padding: 5px;
     border: 1px solid #a6a6a8;

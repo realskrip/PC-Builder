@@ -1,0 +1,28 @@
+﻿.productname {
+    font-size: 24pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    background-color: #3d73b9;
+    color: white;
+    border: none;
+    font-size: 16pt;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 200px;
+}
+
+table.producttable {
+    width: 80%;
+    margin-left: 16%;
+}
+
+td.cellname {
+    text-align: left;
+}
+
+td.cellprice {
+    text-align: right;
+}
