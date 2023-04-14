@@ -1,20 +1,21 @@
 ﻿@model PC_Builder.ViewModels.CartViewModel
 
-<div class="header">
-    <p>Корзина</p>
-</div>
+<link rel="stylesheet" href="/css/Cart.css">
 
 <div>
-    <table>
+    <table class ="producttable">
         @foreach (var item in Model.Products)
         {
             <tr>
+                <td class ="cellname">
+                    <p class="productname">@item.Name</p>
+                </td>
                 <td>
-                    <p>@item.Name @item.Price руб.</p>
+                    <p class="price">@item.Price руб.</p>
                 </td>
                 <td>
                     <form asp-controller="Cart" asp-action="RemoveCart" asp-route-ProductId="@item.ProductId">
-                        <input type="submit" value="Удалить" />
+                        <input class="delete" type="submit" value="Удалить" />
                     </form>
                 </td>
             </tr>
@@ -23,16 +24,27 @@
 </div>
 
 <div>
-    <table>
+    <br />
+    <br />
+    <table class="producttable">
         <tr>
             <td>
-                <p>Общая стоимость</p>
+                <p class="totalname">Общая стоимость</p>
             </td>
             <td>
-                <p>@Model.Total</p>
+                <p class="totalprice">@Model.Total руб.</p>
             </td>
-            <td>
-                <a asp-controller="Order" asp-action="Checkout" asp-route-total="@Model.Total">Оформить заказ</a>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <br />
+    <br />
+    <table class="checkoutorder">
+        <tr class="checkoutorder">
+            <td class="checkoutorder">
+                <a class="checkoutorder" asp-controller="Order" asp-action="Checkout" asp-route-total="@Model.Total">Оформить заказ</a>
             </td>
         </tr>
     </table>
