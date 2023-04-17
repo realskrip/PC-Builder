@@ -7,11 +7,17 @@
         @foreach (var item in Model.Products)
         {
             <tr>
+                <td>
+                    <p>@item.ProductCounter</p>
+                </td>
                 <td class ="cellname">
                     <p class="productname">@item.Name</p>
                 </td>
                 <td>
                     <p class="price">@item.Price руб.</p>
+                </td>
+                <td>
+                    <p class="price">@item.Subtotal руб.</p>
                 </td>
                 <td>
                     <form asp-controller="Cart" asp-action="RemoveCart" asp-route-ProductId="@item.ProductId">

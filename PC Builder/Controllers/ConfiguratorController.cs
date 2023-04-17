@@ -45,7 +45,7 @@ namespace PC_Builder.Controllers
             configuratorViewModel.DataStorages = db.DataStorages.Where(d => d.Category == category);
             configuratorViewModel.Cases = db.Cases.Where(c => c.Category == category);
             configuratorViewModel.PowerSupplies = db.PowerSupplies.Where(p => p.Category == category);
-
+            
             return View(configuratorViewModel);
         }
 
@@ -53,14 +53,39 @@ namespace PC_Builder.Controllers
         [HttpPost]
         public IActionResult AddCart(string name, decimal price, string category)
         {
-            Product product = new Product()
-            {
-                Name = name,
-                Price = price,
-                Category = category
-            };
+            bool match = false;
+            List<Product> productsInCart = db.Products.ToList();
 
-            db.Products.Add(product);
+            Product product = new Product();
+            
+            if (productsInCart.Count != 0)
+            {
+                foreach (var item in productsInCart)
+                {
+                    if (item.Name == name)
+                    {
+                        item.ProductCounter++;
+                        item.Subtotal = item.Price * item.ProductCounter;
+
+                        db.Products.Update(item);
+
+                        match = true;
+                        break;
+                    }
+                }
+            }
+            
+            if (productsInCart.Count == 0 || match == false)
+            {
+                product.ProductCounter = 1;
+                product.Name = name;
+                product.Price = price;
+                product.Subtotal = price;
+                product.Category = category;
+
+                db.Products.Add(product);
+            }
+
             db.SaveChanges();
 
             return RedirectToAction("ShowCart", "Cart");
