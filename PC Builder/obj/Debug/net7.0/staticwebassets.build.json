@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NEVVSUoK5u28H60loNLzHNx+7BVi3vO0GT3jiiAbGR4=",
+  "Hash": "6qJAywyA+vGH+YQrQgI7oGr6v/j8322ohJB8w3gPUnA=",
   "Source": "PC Builder",
   "BasePath": "_content/PC Builder",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\CompletePC.css"
+    },
+    {
+      "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\ErrorEmtyCart.css",
+      "SourceId": "PC Builder",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\",
+      "BasePath": "_content/PC Builder",
+      "RelativePath": "css/ErrorEmtyCart.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ErrorEmtyCart.css"
+    },
+    {
+      "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\Order.css",
+      "SourceId": "PC Builder",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\",
+      "BasePath": "_content/PC Builder",
+      "RelativePath": "css/Order.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Order.css"
     },
     {
       "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleLayout.css",

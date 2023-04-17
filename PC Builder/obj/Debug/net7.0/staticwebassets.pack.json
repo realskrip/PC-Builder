@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\css\\CompletePC.css"
     },
     {
+      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\ErrorEmtyCart.css",
+      "PackagePath": "staticwebassets\\css\\ErrorEmtyCart.css"
+    },
+    {
+      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\Order.css",
+      "PackagePath": "staticwebassets\\css\\Order.css"
+    },
+    {
       "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleLayout.css",
       "PackagePath": "staticwebassets\\css\\StyleLayout.css"
     },
