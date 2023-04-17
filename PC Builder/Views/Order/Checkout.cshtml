@@ -1,45 +1,46 @@
 ﻿@model PC_Builder.Models.Order
 
-<div>
-    <p>Оформить заказ сейчас</p>
-</div>
+<link rel="stylesheet" href="/css/Checkout.css">
 
-<div>
+<div class="textcontent">
+    <p>Оформить заказ сейчас</p>
     <p>Пожалуйста, введите ваши данные, и мы сразу же отправим ваш товар!</p>
 </div>
 
-<div>
+<div class="form">
     <form asp-controller="Order" asp-action="Order">
-        <p>
+        <p class="h1">
             <label asp-for="FullName">ФИО</label><br />
-            <input type="text" asp-for="FullName" required />
-        </p>
-        <p>Адрес</p>
-        <p>
-            <label asp-for="Country">Страна</label><br />
-            <input type="text" asp-for="Country" required />
-        </p>
-        <p>
-            <label asp-for="City">Город</label><br />
-            <input type="text" asp-for="City" required />
-        </p>
-        <p>
-            <label asp-for="Street">Улица</label><br />
-            <input type="text" asp-for="Street" required />
-        </p>
-        <p>
-            <label asp-for="HouseNumber">Дом</label><br />
-            <input type="text" asp-for="HouseNumber" required />
-        </p>
-        <p>
-            <label asp-for="ApartmentNumber">Квартира</label><br />
-            <input type="text" asp-for="ApartmentNumber" required />
-        </p>
-        <p>
-            <label asp-for="PhoneNumber">Номер телефона</label><br />
-            <input type="text" asp-for="PhoneNumber" required />
+            <input type="text" asp-for="FullName" required size="30"/>
         </p>
         <br />
-        <input type="submit" value="Оформить заказ" />
+        <p class="h1">Адрес</p>
+        <p class="h2">
+            <label asp-for="Country">Страна</label><br />
+            <input type="text" asp-for="Country" required size="30" />
+        </p>
+        <p class="h2">
+            <label asp-for="City">Город</label><br />
+            <input type="text" asp-for="City" required size="30" />
+        </p>
+        <p class="h2">
+            <label asp-for="Street">Улица</label><br />
+            <input type="text" asp-for="Street" required size="30" />
+        </p>
+        <p class="h2">
+            <label asp-for="HouseNumber">Дом</label><br />
+            <input type="text" asp-for="HouseNumber" required size="30" />
+        </p>
+        <p class="h2">
+            <label asp-for="ApartmentNumber">Квартира</label><br />
+            <input type="text" asp-for="ApartmentNumber" required size="30" />
+        </p>
+        <br />
+        <p class="h1">
+            <label asp-for="PhoneNumber">Номер телефона</label><br />
+            <input type="text" asp-for="PhoneNumber" required size="30" />
+        </p>
+        <br />
+        <input class="submite" type="submit" value="Оформить заказ" />
     </form>
 </div>
