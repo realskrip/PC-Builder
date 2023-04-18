@@ -1,5 +1,5 @@
 ﻿.productname {
-    font-size: 24pt;
+    font-size: 10pt;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -7,7 +7,7 @@ input.delete {
     background-color: red;
     color: white;
     border: none;
-    font-size: 16pt;
+    font-size: 10pt;
     border-radius: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -25,19 +25,19 @@ td.cellname {
 
 .price {
     text-align: left;
-    font-size: 24pt;
+    font-size: 10pt;
     font-family: 'Roboto', sans-serif;
 }
 
 .totalname {
-    font-size: 24pt;
+    font-size: 10pt;
     font-family: 'Roboto', sans-serif;
     color: green;
 }
 
 .totalprice {
     text-align: right;
-    font-size: 24pt;
+    font-size: 10pt;
     font-family: 'Roboto', sans-serif;
     color: green;
 }
@@ -53,7 +53,7 @@ table.checkoutorder {
 
 td.checkoutorder {
     background-color: green;
-    font-size: 24pt;
+    font-size: 10pt;
     font-family: 'Roboto', sans-serif;
     border-radius: 20px;
     padding: 10px;

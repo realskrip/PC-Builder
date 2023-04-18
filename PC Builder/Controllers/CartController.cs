@@ -49,5 +49,43 @@ namespace PC_Builder.Controllers
             }
             return RedirectToAction("ShowCart");
         }
+
+        [HttpPost]
+        public IActionResult PlusItem(Guid ProductId)
+        {
+            Product? product = db.Products.FirstOrDefault(p => p.ProductId == ProductId);
+
+            if (product != null)
+            {
+                product.ProductCounter++;
+                product.Subtotal = product.ProductCounter * product.Price;
+                db.Products.Update(product);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("ShowCart");
+        }
+
+        [HttpPost]
+        public IActionResult MinusItem(Guid ProductId)
+        {
+            Product? product = db.Products.FirstOrDefault(p => p.ProductId == ProductId);
+
+            if (product != null)
+            {
+                product.ProductCounter--;
+                product.Subtotal = product.ProductCounter * product.Price;
+                db.Products.Update(product);
+
+                if (product.ProductCounter == 0)
+                {
+                    db.Products.Remove(product);
+                }
+
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("ShowCart");
+        }
     }
 }

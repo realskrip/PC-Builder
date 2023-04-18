@@ -7,9 +7,6 @@
         @foreach (var item in Model.Products)
         {
             <tr>
-                <td>
-                    <p>@item.ProductCounter</p>
-                </td>
                 <td class ="cellname">
                     <p class="productname">@item.Name</p>
                 </td>
@@ -23,6 +20,23 @@
                     <form asp-controller="Cart" asp-action="RemoveCart" asp-route-ProductId="@item.ProductId">
                         <input class="delete" type="submit" value="Удалить" />
                     </form>
+                </td>
+                <td>
+                    <p>
+                        <form asp-controller="Cart" asp-action="MinusItem" asp-route-ProductId="@item.ProductId">
+                            <input type="submit" value="-" />
+                        </form>
+                    </p>
+                </td>
+                <td>
+                    <p>@item.ProductCounter</p>
+                </td>
+                <td>
+                    <p>
+                        <form asp-controller="Cart" asp-action="PlusItem" asp-route-ProductId="@item.ProductId">
+                            <input type="submit" value="+" />
+                        </form>
+                    </p>
                 </td>
             </tr>
         }
