@@ -22,7 +22,7 @@ namespace PC_Builder.Controllers
 
             foreach (var item in products)
             {
-                total += item.Price;
+                total += item.Subtotal;
             }
 
             CartViewModel cartViewModel = new CartViewModel()
