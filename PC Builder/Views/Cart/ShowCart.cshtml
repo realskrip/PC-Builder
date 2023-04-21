@@ -4,9 +4,20 @@
 
 <div>
     <table class ="producttable">
+        @{
+            int index = 1;
+        }
+
         @foreach (var item in Model.Products)
         {
             <tr>
+                <td>
+                    <p>@index</p>
+
+                    @{
+                        index++;
+                    }
+                </td>
                 <td class ="cellname">
                     <p class="productname">@item.Name</p>
                 </td>
@@ -15,11 +26,6 @@
                 </td>
                 <td>
                     <p class="price">@item.Subtotal руб.</p>
-                </td>
-                <td>
-                    <form asp-controller="Cart" asp-action="RemoveCart" asp-route-ProductId="@item.ProductId">
-                        <input class="delete" type="submit" value="Удалить" />
-                    </form>
                 </td>
                 <td>
                     <p>
@@ -37,6 +43,11 @@
                             <input type="submit" value="+" />
                         </form>
                     </p>
+                </td>
+                <td>
+                    <form asp-controller="Cart" asp-action="RemoveCart" asp-route-ProductId="@item.ProductId">
+                        <input class="delete" type="submit" value="Удалить" />
+                    </form>
                 </td>
             </tr>
         }
