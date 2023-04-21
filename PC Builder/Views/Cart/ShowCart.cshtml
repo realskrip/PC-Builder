@@ -8,10 +8,31 @@
             int index = 1;
         }
 
+        <tr>
+            <th>
+                <p>№</p>
+            </th>
+            <th class="thItem">
+                <p>Комплектующие</p>
+            </th>
+            <th class="thCategory">
+                <p>Категория</p>
+            </th>
+            <th>
+                <p>Цена</p>
+            </th>
+            <th>
+                <p>Промежуточная стоимость</p>
+            </th>
+            <th colspan="3">
+                <p>Количество</p>
+            </th>
+        </tr>
+
         @foreach (var item in Model.Products)
         {
             <tr>
-                <td>
+                <td class="index">
                     <p>@index</p>
 
                     @{
@@ -21,11 +42,14 @@
                 <td class ="cellname">
                     <p class="productname">@item.Name</p>
                 </td>
+                <td class="cellname">
+                    <p class="productname">@item.Category</p>
+                </td>
                 <td>
                     <p class="price">@item.Price руб.</p>
                 </td>
                 <td>
-                    <p class="price">@item.Subtotal руб.</p>
+                    <p class="subtotal">@item.Subtotal руб.</p>
                 </td>
                 <td>
                     <p>
@@ -35,7 +59,7 @@
                     </p>
                 </td>
                 <td>
-                    <p>@item.ProductCounter</p>
+                    <p class="productCounter" >@item.ProductCounter</p>
                 </td>
                 <td>
                     <p>

@@ -1,22 +1,33 @@
 ﻿.productname {
-    font-size: 10pt;
+    font-size: 14pt;
     font-family: 'Roboto', sans-serif;
+}
+
+td.index {
+    font-size: 14pt;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    padding-right: 15px;
 }
 
 input.delete {
     background-color: red;
     color: white;
     border: none;
-    font-size: 10pt;
+    font-size: 14pt;
     border-radius: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    min-width: 200px;
+    min-width: 100px;
+}
+
+form {
+    text-align: center;
 }
 
 table.producttable {
-    width: 80%;
-    margin-left: 16%;
+    width: 84%;
+    margin-left: 15%;
 }
 
 td.cellname {
@@ -24,20 +35,26 @@ td.cellname {
 }
 
 .price {
-    text-align: left;
-    font-size: 10pt;
+    text-align: center;
+    font-size: 14pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+.subtotal {
+    text-align: center;
+    font-size: 14pt;
     font-family: 'Roboto', sans-serif;
 }
 
 .totalname {
-    font-size: 10pt;
+    font-size: 14pt;
     font-family: 'Roboto', sans-serif;
     color: green;
 }
 
 .totalprice {
     text-align: right;
-    font-size: 10pt;
+    font-size: 14pt;
     font-family: 'Roboto', sans-serif;
     color: green;
 }
@@ -48,14 +65,31 @@ a.checkoutorder {
 }
 
 table.checkoutorder {
-    margin: auto;
+    margin-left: 15%;
 }
 
 td.checkoutorder {
     background-color: green;
-    font-size: 10pt;
+    font-size: 14pt;
     font-family: 'Roboto', sans-serif;
     border-radius: 20px;
     padding: 10px;
     border-width: 10px;
+}
+
+.productCounter {
+    font-size: 14pt;
+    font-family: 'Roboto', sans-serif;
+    color: blue;
+    text-align: center;
+}
+
+th {
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+    color: darkslateblue;
+}
+
+.thItem, .thCategory {
+    text-align: left;
 }
