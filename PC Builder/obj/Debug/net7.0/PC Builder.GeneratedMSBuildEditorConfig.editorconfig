@@ -20,10 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxTaG93Q2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Configurator/CompletePC.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlndXJhdG9yXENvbXBsZXRlUEMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Order/Order.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/PCstore/CompletePC.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUENzdG9yZVxDb21wbGV0ZVBDLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Shared/_Layout.cshtml]
