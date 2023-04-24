@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\css\\Cart.css"
     },
     {
+      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\CartWidget.css",
+      "PackagePath": "staticwebassets\\css\\CartWidget.css"
+    },
+    {
       "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\Checkout.css",
       "PackagePath": "staticwebassets\\css\\Checkout.css"
     },
@@ -23,6 +27,10 @@
     {
       "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\StyleLayout.css",
       "PackagePath": "staticwebassets\\css\\StyleLayout.css"
+    },
+    {
+      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\images\\Cart.png",
+      "PackagePath": "staticwebassets\\images\\Cart.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.PC Builder.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -1,0 +1,10 @@
+﻿p.widget {
+    color: white;
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+table.widget {
+    float: right;
+    margin-right: 10px;
+}

@@ -15,12 +15,20 @@
     </head>
     <body>
         <header>
-            <div class="websiteheader">
-                <p>PC Store</p>
-            </div>
-            <div class="cartwidget">
-                @await Component.InvokeAsync("CartWidget")
-            </div>
+            <table class="websiteheader">
+                <tr class="websiteheader">
+                    <td class="websiteheader">
+                        <div class="websiteheader">
+                            <p>PC Store</p>
+                        </div>
+                    </td>
+                    <td class="websiteheader">
+                        <div class="cartwidget">
+                            @await Component.InvokeAsync("CartWidget")
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </header>
         <section>
             <div class="sidebar">

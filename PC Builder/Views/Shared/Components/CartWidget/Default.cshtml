@@ -1,3 +1,17 @@
 ﻿@model PC_Builder.ViewModels.CartViewModel
 
-<p>Корзина: @Model.ProductCounter  &#8381 @Model.Total <a asp-controller="Cart" asp-action="ShowCart">Корзина</a></p>
+<link rel="stylesheet" href="/css/CartWidget.css">
+
+<table class="widget">
+    <tr>
+        @if (Model.ProductCounter != 0)
+        {
+            <td>
+                <p class="widget">Корзина: @Model.ProductCounter товар(ов) &#8381 @Model.Total</p>
+            </td>
+        }
+        <td>
+            <p><a asp-controller="Cart" asp-action="ShowCart"><img src="/images/Cart.png"></a></p>
+        </td>
+    </tr>
+</table>

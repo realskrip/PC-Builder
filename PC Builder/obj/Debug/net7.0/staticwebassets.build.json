@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UmT4+fQh4l3eHn06lHlyB44dyg0X360L+iS1DJepLCA=",
+  "Hash": "CJeEbHO4HXm1fZBh7KiIJGA5tcC2algWa9hhz9MM/1w=",
   "Source": "PC Builder",
   "BasePath": "_content/PC Builder",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Cart.css"
+    },
+    {
+      "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\CartWidget.css",
+      "SourceId": "PC Builder",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\",
+      "BasePath": "_content/PC Builder",
+      "RelativePath": "css/CartWidget.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CartWidget.css"
     },
     {
       "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\Checkout.css",
@@ -117,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\StyleLayout.css"
+    },
+    {
+      "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\images\\Cart.png",
+      "SourceId": "PC Builder",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\",
+      "BasePath": "_content/PC Builder",
+      "RelativePath": "images/Cart.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Cart.png"
     }
   ]
 }

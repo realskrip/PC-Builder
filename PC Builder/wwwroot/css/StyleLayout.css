@@ -24,17 +24,6 @@ td.tdsidebar {
     border-radius: 5px;
 }
 
-.websiteheader {
-    text-align: left;
-    background-color: #343a40;
-    color: white;
-    padding-left: 10px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    font-size: 21pt;
-    font-family: 'Comfortaa', cursive;
-}
-
 .sidebar {
     float: left;
     padding-left: 10px;
@@ -46,3 +35,23 @@ div.textcontent {
     font-size: 18pt;
     font-family: 'Roboto', sans-serif;
 }
+
+div.websiteheader {
+    text-align: left;
+    color: white;
+    padding-left: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 21pt;
+    font-family: 'Comfortaa', cursive;
+}
+
+table.websiteheader {
+    background-color: #343a40;
+    width: 100%;
+}
+
+.cartwidget {
+    text-align: right;
+}
+
