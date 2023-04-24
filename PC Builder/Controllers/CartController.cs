@@ -34,6 +34,7 @@ namespace PC_Builder.Controllers
             return View(cartViewModel);
         }
 
+
         [HttpPost]
         public IActionResult RemoveCart(Guid? ProductId)
         {

@@ -18,9 +18,9 @@
             <div class="websiteheader">
                 <p>PC Store</p>
             </div>
-            @*<div class="cartwidget">
-                <p>Корзина: число товаров  &#8381 @Model.Total <a asp-controller="Cart" asp-action="ShowCart">Корзина</a></p>
-            </div>*@
+            <div class="cartwidget">
+                @await Component.InvokeAsync("CartWidget")
+            </div>
         </header>
         <section>
             <div class="sidebar">
