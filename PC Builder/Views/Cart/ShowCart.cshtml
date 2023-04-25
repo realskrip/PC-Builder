@@ -3,6 +3,20 @@
 <link rel="stylesheet" href="/css/Cart.css">
 
 <div>
+    <p>
+        Сортировка:
+        <form asp-controller="Cart" asp-action="ShowCart">
+            <select name="sortOrder">
+                <option>Не выбрано</option>
+                <option value="NameSortAscending">По названию</option>
+                <option value="NameSortDescending">По названию</option>
+            </select>
+            <input type="submit" value="Отсортировать">
+        </form>
+    </p>
+</div>
+
+<div>
     <table class ="producttable">
         @{
             int index = 1;

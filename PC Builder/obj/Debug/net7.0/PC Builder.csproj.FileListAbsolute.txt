@@ -1,5 +1,6 @@
 C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\appsettings.json
+C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\PC Builder.staticwebassets.runtime.json
 C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\PC Builder.exe
 C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\PC Builder.deps.json
 C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\PC Builder.runtimeconfig.json
@@ -65,4 +66,3 @@ C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\refint\PC
 C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.pdb
 C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\PC Builder.genruntimeconfig.cache
 C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\obj\Debug\net7.0\ref\PC Builder.dll
-C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder\bin\Debug\net7.0\PC Builder.staticwebassets.runtime.json

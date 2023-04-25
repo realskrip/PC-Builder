@@ -7,18 +7,38 @@ namespace PC_Builder.Controllers
     public class CartController : Controller
     {
         ApplicationContext db;
+
         public CartController(ApplicationContext context)
         {
             db = context;
         }
 
-
-        [HttpGet]
-        public IActionResult ShowCart()
+        //[HttpGet]
+        public IActionResult ShowCart(string? sortOrder)
         {
             decimal? total = 0;
+            IOrderedEnumerable<Product>? result;
 
             List<Product> products = db.Products.ToList();
+
+            switch (sortOrder)
+            {
+                case "NameSortAscending":
+                    {
+                        result = products.OrderBy(n => n.Name);
+                    }
+                    break;
+                case "NameSortDescending":
+                    {
+                        result = products.OrderByDescending(n => n.Name);
+                    }
+                    break;
+                default:
+                    {
+                        result = products.OrderBy(n => n.Name);
+                    }
+                    break;
+            }
 
             foreach (var item in products)
             {
@@ -27,13 +47,12 @@ namespace PC_Builder.Controllers
 
             CartViewModel cartViewModel = new CartViewModel()
             {
-                Products = products,
+                Products = result,
                 Total = total
             };
 
             return View(cartViewModel);
         }
-
 
         [HttpPost]
         public IActionResult RemoveCart(Guid? ProductId)
