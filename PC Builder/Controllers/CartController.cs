@@ -13,7 +13,7 @@ namespace PC_Builder.Controllers
             db = context;
         }
 
-        [HttpGet]
+        //[HttpGet]
         public IActionResult ShowCart()
         {
             decimal? total = 0;
@@ -33,6 +33,46 @@ namespace PC_Builder.Controllers
                 case "NameSortDescending":
                     {
                         result = products.OrderByDescending(n => n.Name);
+                    }
+                    break;
+                case "PriceSortAscending":
+                    {
+                        result = products.OrderBy(p => p.Price);
+                    }
+                    break;
+                case "PriceSortDescending":
+                    {
+                        result = products.OrderByDescending(p => p.Price);
+                    }
+                    break;
+                case "CategorySortAscending":
+                    {
+                        result = products.OrderBy(c => c.Category);
+                    }
+                    break;
+                case "CategorySortDescending":
+                    {
+                        result = products.OrderByDescending(c => c.Category);
+                    }
+                    break;
+                case "ProductCounterSortAscending":
+                    {
+                        result = products.OrderBy(p => p.ProductCounter);
+                    }
+                    break;
+                case "ProductCounterSortDescending":
+                    {
+                        result = products.OrderByDescending(p => p.ProductCounter);
+                    }
+                    break;
+                case "SubtotalSortAscending":
+                    {
+                        result = products.OrderBy(s => s.Subtotal);
+                    }
+                    break;
+                case "SubtotalSortDescending":
+                    {
+                        result = products.OrderByDescending(s => s.Subtotal);
                     }
                     break;
                 default:
