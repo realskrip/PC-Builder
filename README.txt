@@ -5,8 +5,8 @@ ASP.NET Core MVC
 Git
 HTML
 CSS
+JavaScript
 SQL
-Razor Pages
 Nuget
 MS SQL Server
 Entity Framework

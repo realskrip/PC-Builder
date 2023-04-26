@@ -13,13 +13,15 @@ namespace PC_Builder.Controllers
             db = context;
         }
 
-        //[HttpGet]
-        public IActionResult ShowCart(string? sortOrder)
+        [HttpGet]
+        public IActionResult ShowCart()
         {
             decimal? total = 0;
             IOrderedEnumerable<Product>? result;
 
             List<Product> products = db.Products.ToList();
+
+            string? sortOrder = Request.Cookies["sortOrder"];
 
             switch (sortOrder)
             {
