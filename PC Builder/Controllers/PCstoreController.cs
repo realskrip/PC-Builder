@@ -8,43 +8,89 @@ namespace PC_Builder.Controllers
     {
         ApplicationContext db;
 
+        static string? categorySave;
+
         public PCstoreController(ApplicationContext context)
         {
             db = context;
         }
 
-        [HttpGet]
+        //[HttpGet]
         public IActionResult CompletePC(string category)
         {
-            List<CPU> cpus = db.CPUs.ToList();
-            List<Cooling> coolings = db.Coolings.ToList();
-            List<Motherboard> motherboards = db.Motherboards.ToList();
-            List<RAM> rams = db.RAMs.ToList();
-            List<GPU> gpus = db.GPUs.ToList();
-            List<DataStorage> dataStorages = db.DataStorages.ToList();
-            List<Case> cases = db.Cases.ToList();
-            List<PowerSupply> powerSupplies = db.PowerSupplies.ToList();
+            string? sortOrder;
+            PCstoreViewModel pcstoreViewModel = new PCstoreViewModel();
 
-            PCstoreViewModel pcstoreViewModel = new PCstoreViewModel()
+            if (category != null)
             {
-                CPUs = cpus,
-                Coolings = coolings,
-                Motherboards = motherboards,
-                RAMs = rams,
-                GPUs = gpus,
-                DataStorages = dataStorages,
-                Cases = cases,
-                PowerSupplies = powerSupplies,
-            };
+                categorySave = category;
+            }
 
-            pcstoreViewModel.CPUs = db.CPUs.Where(c => c.Category == category);
-            pcstoreViewModel.Coolings = db.Coolings.Where(c => c.Category == category);
-            pcstoreViewModel.Motherboards = db.Motherboards.Where(m => m.Category == category);
-            pcstoreViewModel.RAMs = db.RAMs.Where(r => r.Category == category);
-            pcstoreViewModel.GPUs = db.GPUs.Where(g => g.Category == category);
-            pcstoreViewModel.DataStorages = db.DataStorages.Where(d => d.Category == category);
-            pcstoreViewModel.Cases = db.Cases.Where(c => c.Category == category);
-            pcstoreViewModel.PowerSupplies = db.PowerSupplies.Where(p => p.Category == category);
+            sortOrder = Request.Cookies["sortOrder"];
+
+            switch (sortOrder)
+            {
+                case "NameSortAscending":
+                    {
+                        pcstoreViewModel.CPUs = db.CPUs.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.Coolings = db.Coolings.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.Motherboards = db.Motherboards.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.RAMs = db.RAMs.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.GPUs = db.GPUs.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.DataStorages = db.DataStorages.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.Cases = db.Cases.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.PowerSupplies = db.PowerSupplies.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                    }
+                    break;
+                case "NameSortDescending":
+                    {
+                        pcstoreViewModel.CPUs = db.CPUs.Where(c => c.Category == categorySave).OrderByDescending(n => n.Name);
+                        pcstoreViewModel.Coolings = db.Coolings.Where(c => c.Category == categorySave).OrderByDescending(n => n.Name);
+                        pcstoreViewModel.Motherboards = db.Motherboards.Where(c => c.Category == categorySave).OrderByDescending(n => n.Name);
+                        pcstoreViewModel.RAMs = db.RAMs.Where(c => c.Category == categorySave).OrderByDescending(n => n.Name);
+                        pcstoreViewModel.GPUs = db.GPUs.Where(c => c.Category == categorySave).OrderByDescending(n => n.Name);
+                        pcstoreViewModel.DataStorages = db.DataStorages.Where(c => c.Category == categorySave).OrderByDescending(n => n.Name);
+                        pcstoreViewModel.Cases = db.Cases.Where(c => c.Category == categorySave).OrderByDescending(n => n.Name);
+                        pcstoreViewModel.PowerSupplies = db.PowerSupplies.Where(c => c.Category == categorySave).OrderByDescending(n => n.Name);
+                    }
+                    break;
+                case "PriceSortAscending":
+                    {
+                        pcstoreViewModel.CPUs = db.CPUs.Where(c => c.Category == categorySave).OrderBy(p => p.Price);
+                        pcstoreViewModel.Coolings = db.Coolings.Where(c => c.Category == categorySave).OrderBy(p => p.Price);
+                        pcstoreViewModel.Motherboards = db.Motherboards.Where(c => c.Category == categorySave).OrderBy(p => p.Price);
+                        pcstoreViewModel.RAMs = db.RAMs.Where(c => c.Category == categorySave).OrderBy(p => p.Price);
+                        pcstoreViewModel.GPUs = db.GPUs.Where(c => c.Category == categorySave).OrderBy(p => p.Price);
+                        pcstoreViewModel.DataStorages = db.DataStorages.Where(c => c.Category == categorySave).OrderBy(p => p.Price);
+                        pcstoreViewModel.Cases = db.Cases.Where(c => c.Category == categorySave).OrderBy(p => p.Price);
+                        pcstoreViewModel.PowerSupplies = db.PowerSupplies.Where(c => c.Category == categorySave).OrderBy(p => p.Price);
+                    }
+                    break;
+                case "PriceSortDescending":
+                    {
+                        pcstoreViewModel.CPUs = db.CPUs.Where(c => c.Category == categorySave).OrderByDescending(p => p.Price);
+                        pcstoreViewModel.Coolings = db.Coolings.Where(c => c.Category == categorySave).OrderByDescending(p => p.Price);
+                        pcstoreViewModel.Motherboards = db.Motherboards.Where(c => c.Category == categorySave).OrderByDescending(p => p.Price);
+                        pcstoreViewModel.RAMs = db.RAMs.Where(c => c.Category == categorySave).OrderByDescending(p => p.Price);
+                        pcstoreViewModel.GPUs = db.GPUs.Where(c => c.Category == categorySave).OrderByDescending(p => p.Price);
+                        pcstoreViewModel.DataStorages = db.DataStorages.Where(c => c.Category == categorySave).OrderByDescending(p => p.Price);
+                        pcstoreViewModel.Cases = db.Cases.Where(c => c.Category == categorySave).OrderByDescending(p => p.Price);
+                        pcstoreViewModel.PowerSupplies = db.PowerSupplies.Where(c => c.Category == categorySave).OrderByDescending(p => p.Price);
+                    }
+                    break;
+                default:
+                    {
+                        pcstoreViewModel.CPUs = db.CPUs.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.Coolings = db.Coolings.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.Motherboards = db.Motherboards.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.RAMs = db.RAMs.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.GPUs = db.GPUs.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.DataStorages = db.DataStorages.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.Cases = db.Cases.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                        pcstoreViewModel.PowerSupplies = db.PowerSupplies.Where(c => c.Category == categorySave).OrderBy(n => n.Name);
+                    }
+                    break;
+            }
             
             return View(pcstoreViewModel);
         }
