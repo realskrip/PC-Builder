@@ -3,19 +3,27 @@
 <link rel="stylesheet" href="/css/CompletePC.css">
 
 <div>
-    <p>
-        Сортировка:
-        <form asp-controller="PCstore" asp-action="CompletePC">
-            <select id="sortOrder">
-                <option>Не выбрано</option>
-                <option value="NameSortAscending">По названию &uarr; </option>
-                <option value="NameSortDescending">По названию &darr; </option>
-                <option value="PriceSortAscending">По возрастанию цены &uarr; </option>
-                <option value="PriceSortDescending">По убыванию цены &darr; </option>
-            </select>
-            <input type="submit" value="Отсортировать">
-        </form>
-    </p>
+    <table>
+        <tr>
+            <td class="sort">
+                <p>Сортировка:</p>
+            </td>
+            <td class="sort">
+                <p>
+                    <form asp-controller="PCstore" asp-action="CompletePC">
+                        <select class ="sort" id="sortOrder">
+                            <option class="sort">Не выбрано</option>
+                            <option class="sort" value="NameSortAscending">По названию &uarr; </option>
+                            <option class="sort" value="NameSortDescending">По названию &darr; </option>
+                            <option class="sort" value="PriceSortAscending">По возрастанию цены &uarr; </option>
+                            <option class="sort" value="PriceSortDescending">По убыванию цены &darr; </option>
+                        </select>
+                        <input class="sort" type="submit" value="Отсортировать">
+                    </form>
+                </p>
+            </td>
+        </tr>
+    </table>
 </div>
 
 <div class="container">
@@ -30,7 +38,7 @@
                     <form asp-controller="PCstore" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category" />
-                        <input type="submit" value="@item.Price руб." />
+                        <input class="addcart" type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
@@ -48,7 +56,7 @@
                     <form asp-controller="PCstore" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="@item.Price руб." />
+                        <input class="addcart" type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
@@ -66,7 +74,7 @@
                     <form asp-controller="PCstore" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="@item.Price руб." />
+                        <input class="addcart" type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
@@ -84,7 +92,7 @@
                     <form asp-controller="PCstore" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="@item.Price руб." />
+                        <input class="addcart" type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
@@ -102,7 +110,7 @@
                     <form asp-controller="PCstore" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="@item.Price руб." />
+                        <input class="addcart" type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
@@ -120,7 +128,7 @@
                     <form asp-controller="PCstore" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="@item.Price руб." />
+                        <input class="addcart" type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
@@ -138,7 +146,7 @@
                     <form asp-controller="PCstore" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="@item.Price руб." />
+                        <input class="addcart" type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>
@@ -156,7 +164,7 @@
                     <form asp-controller="PCstore" asp-action="AddCart" asp-route-name="@item.Name">
                         <input type="hidden" name="price" value="@item.Price" />
                         <input type="hidden" name="category" value="@item.Category"/>
-                        <input type="submit" value="@item.Price руб." />
+                        <input class="addcart" type="submit" value="@item.Price руб." />
                     </form>
                 </td>
             </tr>

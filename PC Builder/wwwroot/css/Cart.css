@@ -93,3 +93,23 @@ th {
 .thItem, .thCategory {
     text-align: left;
 }
+
+td.sort {
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+option.sort {
+    font-size: 10pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+select.sort {
+    font-size: 10pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+input.sort {
+    font-size: 10pt;
+    font-family: 'Roboto', sans-serif;
+}

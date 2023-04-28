@@ -3,7 +3,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-input {
+input.addcart {
     background-color: #3d73b9;
     color: white;
     border: none;
@@ -25,4 +25,24 @@ td.cellname {
 
 td.cellprice {
     text-align: right;
+}
+
+option.sort {
+    font-size: 10pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+select.sort {
+    font-size: 10pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+input.sort {
+    font-size: 10pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+td.sort {
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
 }

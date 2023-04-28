@@ -3,25 +3,33 @@
 <link rel="stylesheet" href="/css/Cart.css">
 
 <div>
-    <p>
-        Сортировка:
-        <form asp-controller="Cart" asp-action="ShowCart">
-            <select id="sortOrder">
-                <option>Не выбрано</option>
-                <option value="NameSortAscending">По названию &uarr; </option>
-                <option value="NameSortDescending">По названию &darr; </option>
-                <option value="PriceSortDescending">По возрастанию цены &uarr; </option>
-                <option value="PriceSortAscending">По убыванию цены &darr; </option>
-                <option value="CategorySortAscending">По категории &uarr; </option>
-                <option value="CategorySortDescending">По категории &darr; </option>
-                <option value="ProductCounterSortDescending">По количеству &uarr; </option>
-                <option value="ProductCounterSortAscending">По количеству &darr; </option>
-                <option value="SubtotalSortDescending">По промежуточной стоимости &uarr; </option>
-                <option value="SubtotalSortAscending">По промежуточной стоимости &darr; </option>
-            </select>
-            <input type="submit" value="Отсортировать">
-        </form>
-    </p>
+    <table>
+        <tr>
+            <td class ="sort">
+                <p>Сортировка:</p>
+            </td>
+            <td class="sort">
+                <p>
+                    <form asp-controller="Cart" asp-action="ShowCart">
+                        <select class="sort" id="sortOrder">
+                            <option class="sort">Не выбрано</option>
+                            <option class="sort" value="NameSortAscending">По названию &uarr; </option>
+                            <option class="sort" value="NameSortDescending">По названию &darr; </option>
+                            <option class="sort" value="PriceSortDescending">По возрастанию цены &uarr; </option>
+                            <option class="sort" value="PriceSortAscending">По убыванию цены &darr; </option>
+                            <option class="sort" value="CategorySortAscending">По категории &uarr; </option>
+                            <option class="sort" value="CategorySortDescending">По категории &darr; </option>
+                            <option class="sort" value="ProductCounterSortDescending">По количеству &uarr; </option>
+                            <option class="sort" value="ProductCounterSortAscending">По количеству &darr; </option>
+                            <option class="sort" value="SubtotalSortDescending">По промежуточной стоимости &uarr; </option>
+                            <option class="sort" value="SubtotalSortAscending">По промежуточной стоимости &darr; </option>
+                        </select>
+                        <input class="sort" type="submit" value="Отсортировать">
+                    </form>
+                </p>
+            </td>
+        </tr>
+    </table>
 </div>
 
 <div>
