@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // аутентификация с помощью куки
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options => options.LoginPath = "/login");
+    .AddCookie(options => options.LoginPath = "/Home/Login");
 builder.Services.AddAuthorization();
 
 // получаем строку подключения из файла конфигурации
@@ -26,6 +26,7 @@ app.UseAuthentication();   // добавление middleware аутентификации
 app.UseAuthorization();   // добавление middleware авторизации 
 
 app.MapDefaultControllerRoute();
+
 app.UseStaticFiles(); // поддержка обслуживания статических файлов, например css
 
 app.Run();
