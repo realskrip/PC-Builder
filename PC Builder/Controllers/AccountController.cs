@@ -33,6 +33,34 @@ namespace PC_Builder.Controllers
             return View("Login");
         }
 
+        public IActionResult ShowRegistrationForm()
+        {
+            return View("RegistrationForm");
+        }
+
+        public IActionResult Registration(User user)
+        {
+            if (user.Login == null || user.Password == null)
+            {
+                return RedirectToAction("AuthenticationError", "Account");
+            }
+
+            string login = user.Login;
+
+            User? userLog = db.Users.FirstOrDefault(u => u.Login == login);
+
+            if (userLog == null)
+            {
+                db.Users.Add(user);
+                db.SaveChanges();
+                return View("Login");
+            }
+            else
+            {
+                return View("RegistrationForm");
+            }
+        }
+
         public async Task<RedirectToActionResult> UserAuthentication(User user)
         {
             if (user.Login == null || user.Password == null)
