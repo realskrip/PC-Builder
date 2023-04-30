@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PC_Builder.Models;
 using PC_Builder.ViewModels;
 using System.Text.Json;
@@ -14,6 +15,7 @@ namespace PC_Builder.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IActionResult Checkout(decimal total)
         {
             if (total == 0)

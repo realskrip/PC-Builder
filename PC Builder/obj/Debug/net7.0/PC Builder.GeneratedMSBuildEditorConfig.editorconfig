@@ -16,16 +16,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\skrip\OneDrive\Desktop\PC Builder\PC Builder
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Account/AuthenticationError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBdXRoZW50aWNhdGlvbkVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Cart/ShowCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxTaG93Q2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Home/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/skrip/OneDrive/Desktop/PC Builder/PC Builder/Views/Order/Checkout.cshtml]
