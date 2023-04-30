@@ -96,47 +96,5 @@ namespace PC_Builder.Controllers
             
             return View(pcstoreViewModel);
         }
-
-
-        [HttpPost]
-        public IActionResult AddCart(string name, decimal price, string category)
-        {
-            bool match = false;
-            List<Product> productsInCart = db.Products.ToList();
-
-            Product product = new Product();
-            
-            if (productsInCart.Count != 0)
-            {
-                foreach (var item in productsInCart)
-                {
-                    if (item.Name == name)
-                    {
-                        item.ProductCounter++;
-                        item.Subtotal = item.Price * item.ProductCounter;
-
-                        db.Products.Update(item);
-
-                        match = true;
-                        break;
-                    }
-                }
-            }
-            
-            if (productsInCart.Count == 0 || match == false)
-            {
-                product.ProductCounter = 1;
-                product.Name = name;
-                product.Price = price;
-                product.Subtotal = price;
-                product.Category = category;
-
-                db.Products.Add(product);
-            }
-
-            db.SaveChanges();
-
-            return RedirectToAction("ShowCart", "Cart");
-        }
     }
 }
