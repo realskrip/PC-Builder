@@ -9,19 +9,25 @@
 <head>
     <meta charset='utf-8' />
     <title>PC Builder</title>
+
+    <link rel="stylesheet" href="/css/Login.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap">
 </head>
 <body>
-    <h2>Войдите</h2>
-    <form asp-controller="Account" asp-action="UserAuthentication">
-        <p>
-            <label asp-for="Login">Login</label><br />
-            <input type="text" asp-for="Login" required />
-        </p>
-        <p>
-            <label asp-for="Password">Password</label><br />
-            <input type='password' asp-for="Password" required />
-        </p>
-        <input type='submit' value='Войти' />
-    </form>
+    <div class="login">
+        <p class="header">PS Store</p>
+        <form asp-controller="Account" asp-action="UserAuthentication">
+            <p>
+                <label asp-for="Login">Логин</label><br />
+                <input type="text" asp-for="Login" required />
+            </p>
+            <p>
+                <label asp-for="Password">Пароль</label><br />
+                <input type='password' asp-for="Password" required />
+            </p>
+            <input class="button" type='submit' value='Войти' />
+        </form>
+    </div>
 </body>
 </html>

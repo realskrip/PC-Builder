@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DoZvKEKtTdAZfW7KqpfPYE5sa9Y2Z+i+Btc3x/cD/Kg=",
+  "Hash": "bnuN/wYIjrmGCajt3WpfmoQ+/05z1f/yJnjjB97OrF0=",
   "Source": "PC Builder",
   "BasePath": "_content/PC Builder",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\ErrorEmtyCart.css"
+    },
+    {
+      "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\Login.css",
+      "SourceId": "PC Builder",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\",
+      "BasePath": "_content/PC Builder",
+      "RelativePath": "css/Login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Login.css"
     },
     {
       "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\Order.css",

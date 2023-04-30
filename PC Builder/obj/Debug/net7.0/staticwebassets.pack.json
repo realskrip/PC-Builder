@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\ErrorEmtyCart.css"
     },
     {
+      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
       "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\Order.css",
       "PackagePath": "staticwebassets\\css\\Order.css"
     },

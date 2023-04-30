@@ -1,0 +1,27 @@
+﻿body {
+    background-color: #a6a6a8;
+}
+
+div.login {
+    text-align: center;
+}
+
+p.header {
+    font-size: 34pt;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+label {
+    font-size: 14pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+.button {
+    width: 190px;
+}
