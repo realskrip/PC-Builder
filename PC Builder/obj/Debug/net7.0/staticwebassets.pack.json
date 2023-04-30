@@ -33,6 +33,14 @@
       "PackagePath": "staticwebassets\\images\\Cart.png"
     },
     {
+      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\images\\Exit.png",
+      "PackagePath": "staticwebassets\\images\\Exit.png"
+    },
+    {
+      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\images\\Personal.png",
+      "PackagePath": "staticwebassets\\images\\Personal.png"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.PC Builder.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -15,15 +15,22 @@ namespace PC_Builder.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login()
+        public async Task<RedirectToActionResult> Exit()
         {
-            return View("Login");
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Login", "Account");
         }
 
         [HttpGet]
         public IActionResult AuthenticationError()
         {
             return View("AuthenticationError");
+        }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View("Login");
         }
 
         public async Task<RedirectToActionResult> UserAuthentication(User user)
