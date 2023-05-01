@@ -17,5 +17,6 @@ namespace PC_Builder.Models
         [Column(TypeName = "decimal(8, 2)")]
         public decimal? Subtotal { get; set; }
         public string? Category { get; set; }
+        public string? UserLogin { get; set; }
     }
 }

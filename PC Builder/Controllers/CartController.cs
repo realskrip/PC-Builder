@@ -46,6 +46,7 @@ namespace PC_Builder.Controllers
                 product.Price = price;
                 product.Subtotal = price;
                 product.Category = category;
+                product.UserLogin = HttpContext.User.Identity.Name;
 
                 db.Products.Add(product);
             }
@@ -62,7 +63,7 @@ namespace PC_Builder.Controllers
             decimal? total = 0;
             IOrderedEnumerable<Product>? result;
 
-            List<Product> products = db.Products.ToList();
+            List<Product> products = db.Products.Where(u => u.UserLogin == HttpContext.User.Identity.Name).ToList();
 
             string? sortOrder = Request.Cookies["sortOrder"];
 

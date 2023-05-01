@@ -17,7 +17,7 @@ namespace PC_Builder.Components
             decimal? total = 0;
             int? productCounter = 0;
 
-            List<Product> products = db.Products.ToList();
+            List<Product> products = db.Products.Where(u => u.UserLogin == HttpContext.User.Identity.Name).ToList();
 
             foreach (var item in products)
             {
