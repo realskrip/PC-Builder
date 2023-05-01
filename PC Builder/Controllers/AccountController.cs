@@ -24,7 +24,8 @@ namespace PC_Builder.Controllers
         [HttpGet]
         public IActionResult AuthenticationError()
         {
-            return View("AuthenticationError");
+            ModelState.AddModelError("Login", "Некорректный логин или пароль");
+            return View("Login");
         }
 
         [HttpGet]
@@ -75,7 +76,7 @@ namespace PC_Builder.Controllers
 
             if (userLog == null)
             {
-                return RedirectToAction("Login", "Account");
+                return RedirectToAction("AuthenticationError", "Account");
             }
             else
             {

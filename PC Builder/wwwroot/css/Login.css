@@ -25,3 +25,9 @@ input {
 .button {
     width: 190px;
 }
+
+.validationmessage {
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+    color: red;
+}

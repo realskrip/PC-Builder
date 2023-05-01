@@ -26,6 +26,9 @@
                 <label asp-for="Password">Пароль</label><br />
                 <input type='password' asp-for="Password" required />
             </p>
+            <p class="validationmessage">
+                <span asp-validation-for="Login"></span>
+            </p>
             <input class="button" type='submit' value='Войти' />
         </form>
         <br />
