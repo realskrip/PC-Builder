@@ -20,11 +20,17 @@
         <form asp-controller="Account" asp-action="Registration">
             <p>
                 <label asp-for="Login">Логин</label><br />
-                <input type="text" asp-for="Login" required />
+                <input type="text" asp-for="Login"/>
             </p>
             <p>
                 <label asp-for="Password">Пароль</label><br />
-                <input type='password' asp-for="Password" required />
+                <input type='password' asp-for="Password"/>
+            </p>
+            <p class="validationmessage">
+                <span asp-validation-for="Login"></span>
+            </p>
+            <p class="validationmessage">
+                <span asp-validation-for="Password"></span>
             </p>
             <input class="button" type='submit' value='Зарегистрироваться' />
         </form>

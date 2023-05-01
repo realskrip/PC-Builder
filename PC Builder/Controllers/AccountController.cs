@@ -9,9 +9,16 @@ namespace PC_Builder.Controllers
     public class AccountController : Controller
     {
         ApplicationContext db;
+
         public AccountController(ApplicationContext context)
         {
             db = context;
+        }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View("Login");
         }
 
         [HttpGet]
@@ -28,11 +35,6 @@ namespace PC_Builder.Controllers
             return View("Login");
         }
 
-        [HttpGet]
-        public IActionResult Login()
-        {
-            return View("Login");
-        }
 
         public IActionResult ShowRegistrationForm()
         {
@@ -43,21 +45,36 @@ namespace PC_Builder.Controllers
         {
             if (user.Login == null || user.Password == null)
             {
-                return RedirectToAction("AuthenticationError", "Account");
+                ModelState.AddModelError("Login", "Некорректный логин или пароль");
+                return View("RegistrationForm");
             }
 
             string login = user.Login;
 
-            User? userLog = db.Users.FirstOrDefault(u => u.Login == login);
+            User? existingUser = db.Users.FirstOrDefault(u => u.Login == login);
 
-            if (userLog == null)
+            if (existingUser == null)
             {
+                if (user.Login.Length < 4 || user.Password.Length < 6)
+                {
+                    if (user.Login.Length < 4)
+                    {
+                        ModelState.AddModelError("Login", "Логин должен содержать минимум 4 символа");
+                    }
+                    if (user.Password.Length < 6)
+                    {
+                        ModelState.AddModelError("Password", "Пароль должен содержать минимум 6 символов");
+                    }
+                    return View("RegistrationForm");
+                }
+
                 db.Users.Add(user);
                 db.SaveChanges();
                 return View("Login");
             }
             else
             {
+                ModelState.AddModelError("Login", "Пользователь с данным логином уже существует");
                 return View("RegistrationForm");
             }
         }
