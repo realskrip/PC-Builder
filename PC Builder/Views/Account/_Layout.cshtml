@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="/css/StyleLayout.css">
+        
+        <title>PC Builder</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap">
+    </head>
+    <body>
+        <header>
+            <table class="websiteheader">
+                <tr class="websiteheader">
+                    <td class="websiteheader">
+                        <div class="websiteheader">
+                            <p>PC Store</p>
+                        </div>
+                    </td>
+                    <td class="websiteheader">
+                        <div class="cartwidget">
+                            @await Component.InvokeAsync("CartWidget")
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </header>
+        <section>
+            <div class="sidebar">
+                <table class="sidebar">
+                    <tr>
+                        <td class="tdsidebar">
+                            <a class="sidebarref" asp-controller="Home" asp-action="Index">На главную</a>
+                        </td>
+                    </tr>
+                <tr>
+                    <td class="tdsidebar">
+                        <a class="sidebarref" asp-controller="Account" asp-action="Profile">Мой профиль</a>
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <div>
+                @RenderBody()
+            </div>
+        </section>
+    </body>
+</html>

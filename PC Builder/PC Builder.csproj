@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="Controllers\CartController.cs~RF3e005429.TMP" />
+    <None Remove="Views\Shared\_Layout.cshtml~RF76c5a4ba.TMP" />
   </ItemGroup>
 
   <ItemGroup>
