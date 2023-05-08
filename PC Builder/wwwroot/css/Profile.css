@@ -1,5 +1,30 @@
 ﻿.sectionName {
-    margin-left: 220px;
+    margin-left: 16%;
     font-size: 18pt;
     font-family: 'Roboto', sans-serif;
+}
+
+.profiletable {
+    margin-left: 16%;
+    padding-top: 15px;
+}
+
+.AccountOptionsTable {
+    margin-left: 16%;
+    padding-top: 15px;
+}
+
+.profiledata {
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+td.profile, td.tdoptions {
+    min-width: 120px;
+}
+
+a.options {
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+    color: blue;
 }

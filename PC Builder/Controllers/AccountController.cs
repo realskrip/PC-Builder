@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using PC_Builder.Models;
+using PC_Builder.ViewModels;
 using System.Security.Claims;
 
 namespace PC_Builder.Controllers
@@ -109,7 +110,34 @@ namespace PC_Builder.Controllers
         [HttpGet]
         public IActionResult Profile()
         {
-            return View();
+            User? userLog = db.Users.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+
+            ProfileViewModel profileViewModel = new ProfileViewModel()
+            {
+                Email = userLog.Mail,
+                Login = userLog.Login,
+                Password = userLog.Password,
+            };
+
+            return View(profileViewModel);
+        }
+
+        public async Task<RedirectToActionResult> RemoveAccount()
+        {
+            User? userLog = db.Users.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+
+            List<Product> products = db.Products.Where(p => p.UserLogin == HttpContext.User.Identity.Name).ToList();
+
+            foreach (var item in products)
+            {
+                db.Products.Remove(item);
+            }
+            
+            db.Users.Remove(userLog);
+            db.SaveChanges();
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            return RedirectToAction("Login", "Account");
         }
     }
 }

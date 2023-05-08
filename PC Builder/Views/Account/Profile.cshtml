@@ -1,9 +1,48 @@
-﻿<link rel="stylesheet" href="/css/Profile.css">
+﻿@model PC_Builder.ViewModels.ProfileViewModel
+
+<link rel="stylesheet" href="/css/Profile.css">
 
 <div class="sectionName">
     <p>Мой профиль</p>
 </div>
 
 <div>
-    Данный функционал будет добавлен в скором времени!
+    <table class="profiletable">
+        <tr>
+            <td class="profile">
+                <p class="profiledata">Eamil</p>
+            </td>
+            <td class ="profile">
+                <p class="profiledata">@Model.Email</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="profile">
+                <p class="profiledata">Логин</p>
+            </td>
+            <td class="profile">
+                <p class="profiledata">@Model.Login</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="profile">
+                <p class="profiledata">Пароль</p>
+            </td>
+            <td class="profile">
+                <p class="profiledata">@Model.Password</p>
+            </td>
+        </tr>
+        
+    </table>
+
+    <table class="AccountOptionsTable">
+        <tr>
+            <td class ="tdoptions">
+                <p>Редактировать</p>
+            </td>
+            <td class="tdoptions">
+                <p><a class="options" asp-controller="Account" asp-action="RemoveAccount">Удалить профиль</a></p>
+            </td>
+        </tr>
+    </table>
 </div>
