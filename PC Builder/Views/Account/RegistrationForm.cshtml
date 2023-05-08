@@ -16,8 +16,12 @@
 </head>
 <body>
     <div class="login">
-        <p class="header">Придумайте логин и пароль</p>
+        <p class="header">Введите данные для регистрации</p>
         <form asp-controller="Account" asp-action="Registration">
+            <p>
+                <label asp-for="Mail">Email</label><br />
+                <input type="email" asp-for="Mail" />
+            </p>
             <p>
                 <label asp-for="Login">Логин</label><br />
                 <input type="text" asp-for="Login"/>

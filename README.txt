@@ -2,6 +2,7 @@
 C#
 .net
 ASP.NET Core MVC
+Razor Pages
 Git
 HTML
 CSS

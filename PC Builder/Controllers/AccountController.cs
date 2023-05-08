@@ -43,15 +43,16 @@ namespace PC_Builder.Controllers
 
         public IActionResult Registration(User user)
         {
-            if (user.Login == null || user.Password == null)
+            if (user.Login == null || user.Password == null || user.Mail == null)
             {
-                ModelState.AddModelError("Login", "Некорректный логин или пароль");
+                ModelState.AddModelError("Login", "Некорректные данные");
                 return View("RegistrationForm");
             }
 
             string login = user.Login;
+            string mail = user.Mail;
 
-            User? existingUser = db.Users.FirstOrDefault(u => u.Login == login);
+            User? existingUser = db.Users.FirstOrDefault(u => u.Login == login || u.Mail == mail);
 
             if (existingUser == null)
             {
@@ -74,7 +75,7 @@ namespace PC_Builder.Controllers
             }
             else
             {
-                ModelState.AddModelError("Login", "Пользователь с данным логином уже существует");
+                ModelState.AddModelError("Login", "Пользователь с таким логином или Email уже существует");
                 return View("RegistrationForm");
             }
         }
@@ -89,7 +90,7 @@ namespace PC_Builder.Controllers
             string login = user.Login;
             string password = user.Password;
 
-            User? userLog = db.Users.FirstOrDefault(u => u.Login == login && u.Password == password);
+            User? userLog = db.Users.FirstOrDefault(u => (u.Login == login || u.Mail == login) && u.Password == password);
 
             if (userLog == null)
             {

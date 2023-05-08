@@ -8,6 +8,7 @@ namespace PC_Builder.Models
         [Key]
         public Guid UserId { get; set; }
         public string? Login { get; set; }
+        public string? Mail { get; set; }
         public string? Password { get; set; }
     }
 }
