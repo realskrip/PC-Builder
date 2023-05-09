@@ -13,7 +13,7 @@
                 <p class="profiledata">Eamil</p>
             </td>
             <td class ="profile">
-                <p class="profiledata">@Model.Email</p>
+                <p id="email" class="profiledata">@Model.Email</p>
             </td>
         </tr>
         <tr>
@@ -21,24 +21,15 @@
                 <p class="profiledata">Логин</p>
             </td>
             <td class="profile">
-                <p class="profiledata">@Model.Login</p>
+                <p id="login" class="profiledata">@Model.Login</p>
             </td>
         </tr>
-        <tr>
-            <td class="profile">
-                <p class="profiledata">Пароль</p>
-            </td>
-            <td class="profile">
-                <p class="profiledata">@Model.Password</p>
-            </td>
-        </tr>
-        
     </table>
 
     <table class="AccountOptionsTable">
         <tr>
             <td class ="tdoptions">
-                <p>Редактировать</p>
+                <p><a class="options" asp-controller="Account" asp-action="ShowFormEditAccount" asp-route-email="@Model.Email" asp-route-login="@Model.Login">Редактировать</a></p>
             </td>
             <td class="tdoptions">
                 <p><a class="options" asp-controller="Account" asp-action="RemoveAccount">Удалить профиль</a></p>

@@ -13,4 +13,3 @@ MS SQL Server
 Entity Framework
 LINQ
 JSON
-Unit tests (MSTest)

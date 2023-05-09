@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UIniSYyIXzR2Yz6QVxQTdTWXXIBjwqy3p3vaigTFOJg=",
+  "Hash": "evG2SF/JkKMwMlCK60ZcMESaavzC9VUwTwHlERNOOxo=",
   "Source": "PC Builder",
   "BasePath": "_content/PC Builder",
   "Mode": "Default",
@@ -219,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Personal.png"
+    },
+    {
+      "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\js\\profileCookie.js",
+      "SourceId": "PC Builder",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\",
+      "BasePath": "_content/PC Builder",
+      "RelativePath": "js/profileCookie.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\profileCookie.js"
     },
     {
       "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\js\\sortCookie.js",

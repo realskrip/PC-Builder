@@ -116,7 +116,6 @@ namespace PC_Builder.Controllers
             {
                 Email = userLog.Mail,
                 Login = userLog.Login,
-                Password = userLog.Password,
             };
 
             return View(profileViewModel);
@@ -138,6 +137,58 @@ namespace PC_Builder.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
             return RedirectToAction("Login", "Account");
+        }
+
+        public IActionResult ShowFormEditAccount(string email, string login)
+        {
+            if (email != null && login != null)
+            {
+                HttpContext.Response.Cookies.Append("emailCookie", email);
+                HttpContext.Response.Cookies.Append("loginCookie", login);
+            }
+            
+            return View("FormEditAccount");
+        }
+
+        public async Task<RedirectToActionResult> EditAccount(string Email, string Login, string Password)
+        {
+            User? userLog = db.Users.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+
+            if (userLog != null) 
+            {
+                if (userLog.Mail == Email && userLog.Login == Login && (userLog.Password == Password || Password == null))
+                {
+                    return RedirectToAction("Profile", "Account");
+                }
+                else
+                {
+                    if (Email != null)
+                    {
+                        userLog.Mail = Email;
+                    }
+                    //else if (Email == null)
+                    //{
+                    //    ModelState.AddModelError("Email", "Введите Email");
+                    //    return RedirectToAction("ShowFormEditAccount", "Account");
+                    //}
+
+                    if (Login != null)
+                    {
+                        userLog.Login = Login;
+                    }
+
+                    if (Password != null)
+                    {
+                        userLog.Password = Password;
+                    }
+
+                    db.Users.Update(userLog);
+                    db.SaveChanges();
+                    await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+                    return RedirectToAction("Login", "Account");
+                }
+            }
+            return RedirectToAction("Profile", "Account");
         }
     }
 }

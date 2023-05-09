@@ -1,0 +1,40 @@
+﻿@model PC_Builder.ViewModels.ProfileViewModel
+
+<div>
+    <form asp-controller="Account" asp-action="EditAccount">
+        <table>
+            <tr>
+                <td>
+                    <p>Eamil</p>
+                </td>
+                <td>
+                    <input asp-for="Email" id="email" type="text" />
+                    <span asp-validation-for="Email"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Логин</p>
+                </td>
+                <td>
+                    <input asp-for="Login" id="login" type="text" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Новый пароль</p>
+                </td>
+                <td>
+                    <input asp-for="Password" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Сохранить" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script src="/js/profileCookie.js"></script>
