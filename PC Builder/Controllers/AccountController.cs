@@ -146,15 +146,15 @@ namespace PC_Builder.Controllers
                 HttpContext.Response.Cookies.Append("emailCookie", email);
                 HttpContext.Response.Cookies.Append("loginCookie", login);
             }
-            
+
             return View("FormEditAccount");
         }
 
-        public async Task<RedirectToActionResult> EditAccount(string Email, string Login, string Password)
+        public async Task<IActionResult> EditAccount(string? Email, string? Login, string? Password)
         {
             User? userLog = db.Users.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
 
-            if (userLog != null) 
+            if (userLog != null)
             {
                 if (userLog.Mail == Email && userLog.Login == Login && (userLog.Password == Password || Password == null))
                 {
@@ -162,15 +162,61 @@ namespace PC_Builder.Controllers
                 }
                 else
                 {
+                    if (Email == null || Login == null)
+                    {
+                        if (Email == null)
+                        {
+                            ModelState.AddModelError("Email", "Введите Email");
+                        }
+
+                        if (Login == null)
+                        {
+                            ModelState.AddModelError("Login", "Введите логин");
+                        }
+
+                        return View("FormEditAccount");
+                    }
+
+                    if (Login.Length < 4 || (Password != null && Password.Length < 6))
+                    {
+                        if (Login.Length < 4)
+                        {
+                            ModelState.AddModelError("Login", "Логин должен содержать минимум 4 символа");
+                        }
+
+                        if (Password != null && Password.Length < 6)
+                        {
+                            ModelState.AddModelError("Password", "Пароль должен содержать минимум  символов");
+                        }
+
+                        return View("FormEditAccount");
+                    }
+
+                    
+                    User? existingEmail = db.Users.FirstOrDefault(u => u.Mail == Email && u.Login != userLog.Login);
+                    User? existingLogin = db.Users.FirstOrDefault(u => u.Login == Login && u.Mail != userLog.Mail);
+
+
+                    if (existingEmail != null || existingLogin != null)
+                    {
+                        if (existingEmail != null)
+                        {
+                            ModelState.AddModelError("Email", "Пользователь с таким Email уже существует");
+                        }
+
+                        if (existingLogin != null)
+                        {
+                            ModelState.AddModelError("Login", "Пользователь с таким логином уже существует");
+                        }
+
+                        return View("FormEditAccount");
+                    }
+
+
                     if (Email != null)
                     {
                         userLog.Mail = Email;
                     }
-                    //else if (Email == null)
-                    //{
-                    //    ModelState.AddModelError("Email", "Введите Email");
-                    //    return RedirectToAction("ShowFormEditAccount", "Account");
-                    //}
 
                     if (Login != null)
                     {
