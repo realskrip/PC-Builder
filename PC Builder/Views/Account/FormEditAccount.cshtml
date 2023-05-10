@@ -1,41 +1,49 @@
 ﻿@model PC_Builder.ViewModels.ProfileViewModel
 
+<link rel="stylesheet" href="/css/FormEditAccount.css">
+
 <div>
     <table>
         <form asp-controller="Account" asp-action="EditAccount">
             <tr>
                 <td>
-                    <p>Eamil</p>
+                    <p class="text">Eamil</p>
                 </td>
                 <td>
-                    <input asp-for="Email" id="email" type="text" required/>
-                    <span asp-validation-for="Email"></span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>Логин</p>
+                    <input class="form" asp-for="Email" id="email" type="text" required/>
                 </td>
                 <td>
-                    <input asp-for="Login" id="login" type="text" required/>
-                    <span asp-validation-for="Login"></span>
+                    <p class="validationmessage"><span asp-validation-for="Email"></span></p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <p>Новый пароль</p>
+                    <p class="text">Логин</p>
                 </td>
                 <td>
-                    <input asp-for="Password" type="password" />
-                    <span asp-validation-for="Password"></span>
+                    <input class="form" asp-for="Login" id="login" type="text" required />
+                </td>
+                <td>
+                    <p class="validationmessage"><span asp-validation-for="Login"></span></p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="submit" value="Сохранить" />
+                    <p class="text">Новый пароль</p>
                 </td>
                 <td>
-                <a asp-controller="Account" asp-action="Profile">Назад</a>
+                    <input class="form" asp-for="Password" type="password" />
+                </td>
+                <td>
+                    <p class="validationmessage"><span asp-validation-for="Password"></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="save" type="submit" value="Сохранить" />
+                </td>
+                <td>
+                    <p><a class="back" asp-controller="Account" asp-action="Profile">Назад</a></p>
                 </td>
             </tr>
         </form>

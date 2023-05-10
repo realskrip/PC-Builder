@@ -7,7 +7,7 @@ p {
     margin: 0px;
 }
 
-a {
+a.sidebarref {
     text-decoration: none;
     color: #a6a6a8;
 }
@@ -55,4 +55,3 @@ table.websiteheader {
 .cartwidget {
     text-align: right;
 }
-
