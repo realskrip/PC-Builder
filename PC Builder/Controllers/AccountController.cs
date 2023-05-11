@@ -220,7 +220,9 @@ namespace PC_Builder.Controllers
 
                     if (Login != null)
                     {
-                        List<Product> products = db.Products.Where(p => p.UserLogin == HttpContext.User.Identity.Name).ToList();
+                        string? userLogin = HttpContext.User.Identity.Name;
+                        List<Product> products = db.Products.Where(p => p.UserLogin == userLogin).ToList();
+                        ContactDetails? contactDetails = db.contactDetails.FirstOrDefault(d => d.Login == userLogin);
 
                         if (products.Count > 0)
                         {
@@ -229,6 +231,12 @@ namespace PC_Builder.Controllers
                                 item.UserLogin = Login;
                                 db.Products.Update(item);
                             }
+                        }
+
+                        if (contactDetails != null)
+                        {
+                            contactDetails.Login = Login;
+                            db.contactDetails.Update(contactDetails);
                         }
                         
                         userLog.Login = Login;
