@@ -16,6 +16,7 @@ namespace PC_Builder.Models
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<ContactDetails> contactDetails { get; set; } 
         public ApplicationContext(DbContextOptions<ApplicationContext> options): base(options)
         {
             Database.EnsureCreated();   // создаем базу данных при первом обращении

@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\images\\Personal.png"
     },
     {
+      "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\js\\contactDetailsCookie.js",
+      "PackagePath": "staticwebassets\\js\\contactDetailsCookie.js"
+    },
+    {
       "Id": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\js\\profileCookie.js",
       "PackagePath": "staticwebassets\\js\\profileCookie.js"
     },

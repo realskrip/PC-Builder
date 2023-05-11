@@ -1,0 +1,82 @@
+﻿@model PC_Builder.ViewModels.ContactDetailsViewModel
+
+<div>
+    <table>
+        <form asp-controller="Account" asp-action="EditContactDetails">
+        <tr>
+            <td>
+                <p>Имя</p>
+            </td>
+            <td>
+                <input asp-for="Name" id="Name" type="text" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Фамилия</p>
+            </td>
+            <td>
+                <input asp-for="Surname" id="Surname" type="text" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Телефон</p>
+            </td>
+            <td>
+                <input asp-for="PhoneNumber" id="PhoneNumber" type="text" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Страна</p>
+            </td>
+            <td>
+                <input asp-for="Country" id="Country" type="text" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Регион</p>
+            </td>
+            <td>
+                <input asp-for="Region" id="Region" type="text" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Город</p>
+            </td>
+            <td>
+                <input asp-for="City" id="City" type="text" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Адрес</p>
+            </td>
+            <td>
+                <input asp-for="Address" id="Address" type="text" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Индекс</p>
+            </td>
+            <td>
+                <input asp-for="Postcode" id="Postcode" type="text" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Сохранить" />
+            </td>
+            <td>
+                <p><a asp-controller="Account" asp-action="ShowContactDetails">Назад</a></p>
+            </td>
+        </tr>
+        </form>
+    </table>
+</div>
+
+<script src="/js/contactDetailsCookie.js"></script>

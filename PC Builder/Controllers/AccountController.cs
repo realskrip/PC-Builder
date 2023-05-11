@@ -247,5 +247,87 @@ namespace PC_Builder.Controllers
             }
             return RedirectToAction("Profile", "Account");
         }
+
+        public IActionResult ShowContactDetails()
+        { 
+            ContactDetails? userContactDetails = db.contactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+
+            ContactDetailsViewModel contactDetailsViewModel = new ContactDetailsViewModel();
+
+            if (userContactDetails != null)
+            {
+                contactDetailsViewModel.Name = userContactDetails.Name;
+                contactDetailsViewModel.Surname = userContactDetails.Surname;
+                contactDetailsViewModel.PhoneNumber = userContactDetails.PhoneNumber;
+                contactDetailsViewModel.Country = userContactDetails.Country;
+                contactDetailsViewModel.Region = userContactDetails.Region;
+                contactDetailsViewModel.City = userContactDetails.City;
+                contactDetailsViewModel.Address = userContactDetails.Address;
+                contactDetailsViewModel.Postcode = userContactDetails.Postcode;
+            }
+
+            return View(contactDetailsViewModel); 
+        }
+
+        public IActionResult ShowFormEditContactDetails(string? name, string? surname, string? phoneNumber, 
+            string? country, string? region, string? city, string? address, string? postcode)
+        {
+            if (name != null && surname != null && phoneNumber != null && country != null 
+                && region != null && city != null && address != null && postcode != null)
+            {
+                HttpContext.Response.Cookies.Append("nameCookie", name);
+                HttpContext.Response.Cookies.Append("surnameCookie", surname);
+                HttpContext.Response.Cookies.Append("phoneNumberCookie", phoneNumber);
+                HttpContext.Response.Cookies.Append("countryCookie", country);
+                HttpContext.Response.Cookies.Append("regionCookie", region);
+                HttpContext.Response.Cookies.Append("cityCookie", city);
+                HttpContext.Response.Cookies.Append("addressCookie", address);
+                HttpContext.Response.Cookies.Append("postcodeCookie", postcode);
+            }
+
+            return View();
+        }
+
+        public IActionResult EditContactDetails(string? Name, string? Surname, string? PhoneNumber,
+            string? Country, string? Region, string? City, string? Address, string? Postcode)
+        {
+            ContactDetails? userContactDetails = new ContactDetails() 
+            {
+                Login = HttpContext.User.Identity.Name,
+                Name = Name,
+                Surname = Surname,
+                PhoneNumber = PhoneNumber,
+                Country = Country,
+                Region = Region,
+                City = City,
+                Address = Address,
+                Postcode = Postcode
+            };
+
+            ContactDetails? userExists = db.contactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+
+            if (userExists == null)
+            {
+                db.contactDetails.Add(userContactDetails);
+            }
+            else
+            {
+                userExists.Login = userContactDetails.Login;
+                userExists.Name = userContactDetails.Name;
+                userExists.Surname = userContactDetails.Surname;
+                userExists.PhoneNumber = userContactDetails.PhoneNumber;
+                userExists.Country = userContactDetails.Country;
+                userExists.Region = userContactDetails.Region;
+                userExists.City = userContactDetails.City;
+                userExists.Address = userContactDetails.Address;
+                userExists.Postcode = userContactDetails.Postcode;
+
+                db.contactDetails.Update(userExists);
+            }
+            
+            db.SaveChanges();
+
+            return RedirectToAction("ShowContactDetails");
+        }
     }
 }
