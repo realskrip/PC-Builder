@@ -26,7 +26,7 @@ namespace PC_Builder.Controllers
             {
                 foreach (var item in productsInCart)
                 {
-                    if (item.Name == name)
+                    if (item.Name == name && item.UserLogin == HttpContext.User.Identity.Name)
                     {
                         item.ProductCounter++;
                         item.Subtotal = item.Price * item.ProductCounter;
