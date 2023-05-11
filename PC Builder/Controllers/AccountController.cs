@@ -124,14 +124,15 @@ namespace PC_Builder.Controllers
         public async Task<RedirectToActionResult> RemoveAccount()
         {
             User? userLog = db.Users.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
-
             List<Product> products = db.Products.Where(p => p.UserLogin == HttpContext.User.Identity.Name).ToList();
+            ContactDetails? contactDetails = db.contactDetails.FirstOrDefault(d => d.Login == HttpContext.User.Identity.Name);
 
             foreach (var item in products)
             {
                 db.Products.Remove(item);
             }
-            
+
+            db.contactDetails.Remove(contactDetails);
             db.Users.Remove(userLog);
             db.SaveChanges();
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
