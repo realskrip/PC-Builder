@@ -14,9 +14,9 @@ namespace PC_Builder.Controllers
             db = context;
         }
 
-        [HttpGet]
+        //[HttpGet]
         [Authorize]
-        public IActionResult Checkout(decimal total)
+        public IActionResult CheckContactDetails(decimal total)
         {
             if (total == 0)
             {
@@ -24,18 +24,59 @@ namespace PC_Builder.Controllers
             }
             else
             {
-                return View();
+                ContactDetails? userContactDetails = db.contactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+
+                if (userContactDetails == null)
+                {
+                    return RedirectToAction("ShowFormEditContactDetails", "Account");
+                }
+
+                return RedirectToAction("Checkout", "Order");
             }
         }
 
-        [HttpPost]
-        public IActionResult Order(Order order)
+        public IActionResult Checkout()
+        {
+            ContactDetails? userContactDetails = db.contactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+
+            ContactDetailsViewModel contactDetailsViewModel = new ContactDetailsViewModel();
+
+            if (userContactDetails != null)
+            {
+                contactDetailsViewModel.Name = userContactDetails.Name;
+                contactDetailsViewModel.Surname = userContactDetails.Surname;
+                contactDetailsViewModel.PhoneNumber = userContactDetails.PhoneNumber;
+                contactDetailsViewModel.Country = userContactDetails.Country;
+                contactDetailsViewModel.Region = userContactDetails.Region;
+                contactDetailsViewModel.City = userContactDetails.City;
+                contactDetailsViewModel.Address = userContactDetails.Address;
+                contactDetailsViewModel.Postcode = userContactDetails.Postcode;
+            }
+
+            return View(contactDetailsViewModel);
+        }
+
+        //[HttpPost]
+        public IActionResult Order()
         {
             string productsToJSON;
-            List<Product> products = db.Products.ToList();
+            List<Product> products = db.Products.Where(u => u.UserLogin == HttpContext.User.Identity.Name).ToList();
+            User? userProfile = db.Users.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+            ContactDetails? userContactDetails = db.contactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+            Order order = new Order();
 
             productsToJSON = JsonSerializer.Serialize(products);
 
+            order.Mail = userProfile.Mail;
+            order.Login = userProfile.Login;
+            order.Name = userContactDetails.Name;
+            order.Surname = userContactDetails.Surname;
+            order.PhoneNumber = userContactDetails.PhoneNumber;
+            order.Country = userContactDetails.Country;
+            order.Region = userContactDetails.Region;
+            order.City = userContactDetails.City;
+            order.Address = userContactDetails.Address;
+            order.Postcode = userContactDetails.Postcode;
             order.Products = productsToJSON;
 
             db.Orders.Add(order);

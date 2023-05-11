@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "o+LcdAEAvidLu30gouAZjdn8kk4DFbHuIRgsZBsZGds=",
+  "Hash": "nVtguKAjW1YlCQdSo4W6N/U67xgmUEX0Cxllm0VgijQ=",
   "Source": "PC Builder",
   "BasePath": "_content/PC Builder",
   "Mode": "Default",
@@ -49,23 +49,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\CartWidget.css"
-    },
-    {
-      "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\Checkout.css",
-      "SourceId": "PC Builder",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\",
-      "BasePath": "_content/PC Builder",
-      "RelativePath": "css/Checkout.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Checkout.css"
     },
     {
       "Identity": "C:\\Users\\skrip\\OneDrive\\Desktop\\PC Builder\\PC Builder\\wwwroot\\css\\CompletePC.css",
