@@ -220,6 +220,17 @@ namespace PC_Builder.Controllers
 
                     if (Login != null)
                     {
+                        List<Product> products = db.Products.Where(p => p.UserLogin == HttpContext.User.Identity.Name).ToList();
+
+                        if (products.Count > 0)
+                        {
+                            foreach (var item in products)
+                            {
+                                item.UserLogin = Login;
+                                db.Products.Update(item);
+                            }
+                        }
+                        
                         userLog.Login = Login;
                     }
 
