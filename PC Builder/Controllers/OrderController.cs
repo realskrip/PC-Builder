@@ -78,6 +78,7 @@ namespace PC_Builder.Controllers
             order.Address = userContactDetails.Address;
             order.Postcode = userContactDetails.Postcode;
             order.Products = productsToJSON;
+            order.Date = DateTime.UtcNow;
 
             db.Orders.Add(order);
 

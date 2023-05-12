@@ -1,0 +1,34 @@
+﻿@model PC_Builder.ViewModels.OrdersViewModel
+
+<div>
+    <p>Мои заказы</p>
+
+    <table>
+        @{
+            int index = 1;
+        }
+
+        @foreach (var item in Model.Orders)
+        {
+            <tr>
+                <td>
+                    <p>@index</p>
+
+                    @{
+                        index++;
+                    }
+                </td>
+                <td>
+                    @item.Products
+                </td>
+                <td>
+                    <p>Почта России</p>
+                    <p>(Посылка)</p>
+                </td>
+                <td>
+                    <p>@item.Date</p>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

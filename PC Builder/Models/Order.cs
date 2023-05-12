@@ -18,5 +18,6 @@ namespace PC_Builder.Models
         public string? Address { get; set; }
         public string? Postcode { get; set; }
         public string? Products { get; set; }
+        public DateTime? Date { get; set; }
     }
 }

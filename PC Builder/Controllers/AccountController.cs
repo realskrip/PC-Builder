@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using PC_Builder.Models;
 using PC_Builder.ViewModels;
+using System;
 using System.Security.Claims;
+using System.Text.Json;
 
 namespace PC_Builder.Controllers
 {
@@ -337,6 +339,16 @@ namespace PC_Builder.Controllers
             db.SaveChanges();
 
             return RedirectToAction("ShowContactDetails");
+        }
+
+        public IActionResult ShowOrders()
+        {
+            OrdersViewModel ordersViewModel = new OrdersViewModel()
+            {
+                Orders = db.Orders.Where(o => o.Login == HttpContext.User.Identity.Name)
+            };
+
+            return View(ordersViewModel);
         }
     }
 }
