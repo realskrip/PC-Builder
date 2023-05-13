@@ -1,0 +1,27 @@
+﻿p.header {
+    font-size: 18pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+table.ContactsTable {
+    margin-left: 16%;
+    padding-top: 15px;
+}
+
+p.contactsDetails {
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+td.contactsDetails {
+    min-width: 120px;
+}
+
+input.editButton {
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+    color: blue;
+    border: 0;
+    background: transparent;
+    padding: 0;
+}
