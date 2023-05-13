@@ -1,78 +1,77 @@
 ﻿@model PC_Builder.ViewModels.ContactDetailsViewModel
 
-<div class="sectionName">
-    <p>Контактные данные</p>
+<link rel="stylesheet" href="/css/ShowContactDetails.css">
+
+<div>
+    <p class="header">Контактные данные</p>
 </div>
 
 <div>
-    <table class="profiletable">
+    <table class="ContactsTable">
         <tr>
-            <td class="profile">
-                <p class="profiledata">Имя</p>
+            <td class="contactsDetails">
+                <p class="contactsDetails">Имя</p>
             </td>
-            <td class="profile">
-                <p class="profiledata">@Model.Name</p>
+            <td class="contactsDetails">
+                <p class="contactsDetails">@Model.Name</p>
             </td>
         </tr>
         <tr>
-            <td class="profile">
-                <p class="profiledata">Фамилия</p>
+            <td class="contactsDetails">
+                <p class="contactsDetails">Фамилия</p>
             </td>
-            <td class="profile">
-                <p class="profiledata">@Model.Surname</p>
-            </td>
-        </tr>
-        <tr>
-            <td class="profile">
-                <p class="profiledata">Телефон</p>
-            </td>
-            <td class="profile">
-                <p class="profiledata">@Model.PhoneNumber</p>
+            <td class="contactsDetails">
+                <p class="contactsDetails">@Model.Surname</p>
             </td>
         </tr>
         <tr>
-            <td class="profile">
-                <p class="profiledata">Страна</p>
+            <td class="contactsDetails">
+                <p class="contactsDetails">Телефон</p>
             </td>
-            <td class="profile">
-                <p class="profiledata">@Model.Country</p>
-            </td>
-        </tr>
-        <tr>
-            <td class="profile">
-                <p class="profiledata">Регион</p>
-            </td>
-            <td class="profile">
-                <p class="profiledata">@Model.Region</p>
+            <td class="contactsDetails">
+                <p class="contactsDetails">@Model.PhoneNumber</p>
             </td>
         </tr>
         <tr>
-            <td class="profile">
-                <p class="profiledata">Город</p>
+            <td class="contactsDetails">
+                <p class="contactsDetails">Страна</p>
             </td>
-            <td class="profile">
-                <p class="profiledata">@Model.City</p>
-            </td>
-        </tr>
-        <tr>
-            <td class="profile">
-                <p class="profiledata">Адрес</p>
-            </td>
-            <td class="profile">
-                <p class="profiledata">@Model.Address</p>
+            <td class="contactsDetails">
+                <p class="contactsDetails">@Model.Country</p>
             </td>
         </tr>
         <tr>
-            <td class="profile">
-                <p class="profiledata">Индекс</p>
+            <td class="contactsDetails">
+                <p class="contactsDetails">Регион</p>
             </td>
-            <td class="profile">
-                <p class="profiledata">@Model.Postcode</p>
+            <td class="contactsDetails">
+                <p class="contactsDetails">@Model.Region</p>
             </td>
         </tr>
-    </table>
-
-    <table>
+        <tr>
+            <td class="contactsDetails">
+                <p class="contactsDetails">Город</p>
+            </td>
+            <td class="contactsDetails">
+                <p class="contactsDetails">@Model.City</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="contactsDetails">
+                <p class="contactsDetails">Адрес</p>
+            </td>
+            <td class="contactsDetails">
+                <p class="contactsDetails">@Model.Address</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="contactsDetails">
+                <p class="contactsDetails">Индекс</p>
+            </td>
+            <td class="contactsDetails">
+                <p class="contactsDetails">@Model.Postcode</p>
+            </td>
+        </tr>
         <tr>
             <td>
                 <form asp-controller="Account" asp-action="ShowFormEditContactDetails">
@@ -85,12 +84,12 @@
                     <input type="hidden" name="address" value="@Model.Address" />
                     <input type="hidden" name="postcode" value="@Model.Postcode" />
 
-                    <input type="submit" value="Редактировать" />
+                    <input class="editButton" type="submit" value="Редактировать" />
                 </form>
             </td>
             <td>
                 <form asp-controller="Order" asp-action="Order">
-                    <input type="submit" value="Подтвердить" />
+                    <input class="editButton" type="submit" value="Подтвердить" />
                 </form>
             </td>
         </tr>

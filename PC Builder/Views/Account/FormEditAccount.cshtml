@@ -6,43 +6,43 @@
     <table>
         <form asp-controller="Account" asp-action="EditAccount">
             <tr>
-                <td>
+                <td class="td">
                     <p class="text">Eamil</p>
                 </td>
-                <td>
+                <td class="td">
                     <input class="form" asp-for="Email" id="email" type="text" required/>
                 </td>
-                <td>
+                <td class="td">
                     <p class="validationmessage"><span asp-validation-for="Email"></span></p>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="td">
                     <p class="text">Логин</p>
                 </td>
-                <td>
+                <td class="td">
                     <input class="form" asp-for="Login" id="login" type="text" required />
                 </td>
-                <td>
+                <td class="td">
                     <p class="validationmessage"><span asp-validation-for="Login"></span></p>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="td">
                     <p class="text">Новый пароль</p>
                 </td>
-                <td>
+                <td class="td">
                     <input class="form" asp-for="Password" type="password" />
                 </td>
-                <td>
+                <td class="td">
                     <p class="validationmessage"><span asp-validation-for="Password"></span></p>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="td">
                     <input class="save" type="submit" value="Сохранить" />
                 </td>
-                <td>
+                <td class="td">
                     <p><a class="back" asp-controller="Account" asp-action="Profile">Назад</a></p>
                 </td>
             </tr>

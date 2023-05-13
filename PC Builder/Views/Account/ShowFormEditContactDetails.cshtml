@@ -1,78 +1,80 @@
 ﻿@model PC_Builder.ViewModels.ContactDetailsViewModel
 
+<link rel="stylesheet" href="/css/FormEditAccount.css">
+
 <div>
     <table>
         <form asp-controller="Account" asp-action="EditContactDetails">
         <tr>
-            <td>
-                <p>Имя</p>
+            <td class="td">
+                <p class="text">Имя</p>
             </td>
-            <td>
-                <input asp-for="Name" id="Name" type="text" required />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Фамилия</p>
-            </td>
-            <td>
-                <input asp-for="Surname" id="Surname" type="text" required />
+            <td class="td">
+                <input class="form" asp-for="Name" id="Name" type="text" required />
             </td>
         </tr>
         <tr>
-            <td>
-                <p>Телефон</p>
+            <td class="td">
+                <p class="text">Фамилия</p>
             </td>
-            <td>
-                <input asp-for="PhoneNumber" id="PhoneNumber" type="text" required />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Страна</p>
-            </td>
-            <td>
-                <input asp-for="Country" id="Country" type="text" required />
+            <td class="td">
+                <input class="form" asp-for="Surname" id="Surname" type="text" required />
             </td>
         </tr>
         <tr>
-            <td>
-                <p>Регион</p>
+            <td class="td">
+                <p class="text">Телефон</p>
             </td>
-            <td>
-                <input asp-for="Region" id="Region" type="text" required />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Город</p>
-            </td>
-            <td>
-                <input asp-for="City" id="City" type="text" required />
+            <td class="td">
+                <input class="form" asp-for="PhoneNumber" id="PhoneNumber" type="text" required />
             </td>
         </tr>
         <tr>
-            <td>
-                <p>Адрес</p>
+            <td class="td">
+                <p class="text">Страна</p>
             </td>
-            <td>
-                <input asp-for="Address" id="Address" type="text" required />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>Индекс</p>
-            </td>
-            <td>
-                <input asp-for="Postcode" id="Postcode" type="text" required />
+            <td class="td">
+                <input class="form" asp-for="Country" id="Country" type="text" required />
             </td>
         </tr>
         <tr>
-            <td>
-                <input type="submit" value="Сохранить" />
+            <td class="td">
+                <p class="text">Регион</p>
             </td>
-            <td>
-                <p><a asp-controller="Account" asp-action="ShowContactDetails">Назад</a></p>
+            <td class="td">
+                <input class="form" asp-for="Region" id="Region" type="text" required />
+            </td>
+        </tr>
+        <tr>
+            <td class="td">
+                <p class="text">Город</p>
+            </td>
+            <td class="td">
+                <input class="form" asp-for="City" id="City" type="text" required />
+            </td>
+        </tr>
+        <tr>
+            <td class="td">
+                <p class="text">Адрес</p>
+            </td>
+            <td class="td">
+                <input class="form" asp-for="Address" id="Address" type="text" required />
+            </td>
+        </tr>
+        <tr>
+            <td class="td">
+                <p class="text">Индекс</p>
+            </td>
+            <td class="td">
+                <input class="form" asp-for="Postcode" id="Postcode" type="text" required />
+            </td>
+        </tr>
+        <tr>
+            <td class="td">
+                <input class="save" type="submit" value="Сохранить" />
+            </td>
+            <td class="td">
+                <p><a class="back" asp-controller="Account" asp-action="ShowContactDetails">Назад</a></p>
             </td>
         </tr>
         </form>

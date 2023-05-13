@@ -30,3 +30,7 @@
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
 }
+
+td.td {
+    min-width: 120px;
+}
