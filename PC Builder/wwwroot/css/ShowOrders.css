@@ -1,0 +1,21 @@
+﻿p.header {
+    font-size: 18pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+p.p {
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+p.products {
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 15px;
+}
+
+p.index {
+    padding-right: 10px;
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+}

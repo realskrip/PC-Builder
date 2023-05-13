@@ -1,7 +1,9 @@
 ﻿@model PC_Builder.ViewModels.OrdersViewModel
 
+<link rel="stylesheet" href="/css/ShowOrders.css">
+
 <div>
-    <p>Мои заказы</p>
+    <p class="header">Мои заказы</p>
 
     <table>
         @{
@@ -11,22 +13,22 @@
         @foreach (var item in Model.Orders)
         {
             <tr>
-                <td>
-                    <p>@index</p>
+                <td valign="top">
+                    <p class="index">@index</p>
 
                     @{
                         index++;
                     }
                 </td>
-                <td>
-                    @item.Products
+                <td valign="top">
+                    <p class="products">@item.Products</p>
                 </td>
-                <td>
-                    <p>Почта России</p>
-                    <p>(Посылка)</p>
+                <td valign="top">
+                    <p class="p">Почта России</p>
+                    <p class="p">(Посылка)</p>
                 </td>
-                <td>
-                    <p>@item.Date</p>
+                <td valign="top">
+                    <p class="p">@item.Date</p>
                 </td>
             </tr>
         }
