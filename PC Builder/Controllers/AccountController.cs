@@ -3,9 +3,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using PC_Builder.Models;
 using PC_Builder.ViewModels;
-using System;
 using System.Security.Claims;
-using System.Text.Json;
 
 namespace PC_Builder.Controllers
 {
@@ -113,12 +111,13 @@ namespace PC_Builder.Controllers
         public IActionResult Profile()
         {
             User? userLog = db.Users.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+            ProfileViewModel profileViewModel = new ProfileViewModel();
 
-            ProfileViewModel profileViewModel = new ProfileViewModel()
+            if (userLog != null)
             {
-                Email = userLog.Mail,
-                Login = userLog.Login,
-            };
+                profileViewModel.Email = userLog.Mail;
+                profileViewModel.Login = userLog.Login;
+            }
 
             return View(profileViewModel);
         }

@@ -17,7 +17,7 @@ namespace PC_Builder.Controllers
         [HttpPost]
         public IActionResult AddCart(string name, decimal price, string category)
         {
-            bool match = false;
+            bool counterUpdated = false;
             List<Product> productsInCart = db.Products.ToList();
 
             Product product = new Product();
@@ -33,13 +33,13 @@ namespace PC_Builder.Controllers
 
                         db.Products.Update(item);
 
-                        match = true;
+                        counterUpdated = true;
                         break;
                     }
                 }
             }
 
-            if (productsInCart.Count == 0 || match == false)
+            if (productsInCart.Count == 0 || counterUpdated == false)
             {
                 product.ProductCounter = 1;
                 product.Name = name;
