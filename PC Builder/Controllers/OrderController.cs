@@ -24,7 +24,7 @@ namespace PC_Builder.Controllers
             }
             else
             {
-                ContactDetails? userContactDetails = db.contactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+                ContactDetails? userContactDetails = db.ContactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
 
                 if (userContactDetails == null)
                 {
@@ -37,7 +37,7 @@ namespace PC_Builder.Controllers
 
         public IActionResult Checkout()
         {
-            ContactDetails? userContactDetails = db.contactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+            ContactDetails? userContactDetails = db.ContactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
 
             ContactDetailsViewModel contactDetailsViewModel = new ContactDetailsViewModel();
 
@@ -62,7 +62,7 @@ namespace PC_Builder.Controllers
             string productsToJSON;
             List<ProductInCart> products = db.ProductsInCart.Where(u => u.UserLogin == HttpContext.User.Identity.Name).ToList();
             User? userProfile = db.Users.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
-            ContactDetails? userContactDetails = db.contactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+            ContactDetails? userContactDetails = db.ContactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
             Order order = new Order();
 
             productsToJSON = JsonSerializer.Serialize(products);

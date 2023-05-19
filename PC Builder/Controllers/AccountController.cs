@@ -126,14 +126,14 @@ namespace PC_Builder.Controllers
         {
             User? userLog = db.Users.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
             List<ProductInCart> products = db.ProductsInCart.Where(p => p.UserLogin == HttpContext.User.Identity.Name).ToList();
-            ContactDetails? contactDetails = db.contactDetails.FirstOrDefault(d => d.Login == HttpContext.User.Identity.Name);
+            ContactDetails? contactDetails = db.ContactDetails.FirstOrDefault(d => d.Login == HttpContext.User.Identity.Name);
 
             foreach (var item in products)
             {
                 db.ProductsInCart.Remove(item);
             }
 
-            db.contactDetails.Remove(contactDetails);
+            db.ContactDetails.Remove(contactDetails);
             db.Users.Remove(userLog);
             db.SaveChanges();
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
@@ -224,7 +224,7 @@ namespace PC_Builder.Controllers
                     {
                         string? userLogin = HttpContext.User.Identity.Name;
                         List<ProductInCart> products = db.ProductsInCart.Where(p => p.UserLogin == userLogin).ToList();
-                        ContactDetails? contactDetails = db.contactDetails.FirstOrDefault(d => d.Login == userLogin);
+                        ContactDetails? contactDetails = db.ContactDetails.FirstOrDefault(d => d.Login == userLogin);
 
                         if (products.Count > 0)
                         {
@@ -238,7 +238,7 @@ namespace PC_Builder.Controllers
                         if (contactDetails != null)
                         {
                             contactDetails.Login = Login;
-                            db.contactDetails.Update(contactDetails);
+                            db.ContactDetails.Update(contactDetails);
                         }
                         
                         userLog.Login = Login;
@@ -260,7 +260,7 @@ namespace PC_Builder.Controllers
 
         public IActionResult ShowContactDetails()
         { 
-            ContactDetails? userContactDetails = db.contactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+            ContactDetails? userContactDetails = db.ContactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
 
             ContactDetailsViewModel contactDetailsViewModel = new ContactDetailsViewModel();
 
@@ -314,11 +314,11 @@ namespace PC_Builder.Controllers
                 Postcode = Postcode
             };
 
-            ContactDetails? userExists = db.contactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
+            ContactDetails? userExists = db.ContactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
 
             if (userExists == null)
             {
-                db.contactDetails.Add(userContactDetails);
+                db.ContactDetails.Add(userContactDetails);
             }
             else
             {
@@ -332,7 +332,7 @@ namespace PC_Builder.Controllers
                 userExists.Address = userContactDetails.Address;
                 userExists.Postcode = userContactDetails.Postcode;
 
-                db.contactDetails.Update(userExists);
+                db.ContactDetails.Update(userExists);
             }
             
             db.SaveChanges();
