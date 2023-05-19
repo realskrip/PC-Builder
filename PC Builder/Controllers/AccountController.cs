@@ -125,12 +125,12 @@ namespace PC_Builder.Controllers
         public async Task<RedirectToActionResult> RemoveAccount()
         {
             User? userLog = db.Users.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
-            List<Product> products = db.Products.Where(p => p.UserLogin == HttpContext.User.Identity.Name).ToList();
+            List<ProductInCart> products = db.ProductsInCart.Where(p => p.UserLogin == HttpContext.User.Identity.Name).ToList();
             ContactDetails? contactDetails = db.contactDetails.FirstOrDefault(d => d.Login == HttpContext.User.Identity.Name);
 
             foreach (var item in products)
             {
-                db.Products.Remove(item);
+                db.ProductsInCart.Remove(item);
             }
 
             db.contactDetails.Remove(contactDetails);
@@ -223,7 +223,7 @@ namespace PC_Builder.Controllers
                     if (Login != null)
                     {
                         string? userLogin = HttpContext.User.Identity.Name;
-                        List<Product> products = db.Products.Where(p => p.UserLogin == userLogin).ToList();
+                        List<ProductInCart> products = db.ProductsInCart.Where(p => p.UserLogin == userLogin).ToList();
                         ContactDetails? contactDetails = db.contactDetails.FirstOrDefault(d => d.Login == userLogin);
 
                         if (products.Count > 0)
@@ -231,7 +231,7 @@ namespace PC_Builder.Controllers
                             foreach (var item in products)
                             {
                                 item.UserLogin = Login;
-                                db.Products.Update(item);
+                                db.ProductsInCart.Update(item);
                             }
                         }
 

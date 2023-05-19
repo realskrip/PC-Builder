@@ -19,7 +19,7 @@ namespace PC_Builder.Tests.ControllerTests
         {
             // arrange
             using var dbContext = new ApplicationContext(options);
-            dbContext.Products.Add(new Product {
+            dbContext.Products.Add(new ProductInCart {
                 //new Product {
                 //    Name = "Product1",
                 //    Category = "CPU",

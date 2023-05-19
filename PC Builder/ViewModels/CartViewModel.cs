@@ -4,7 +4,7 @@ namespace PC_Builder.ViewModels
 {
     public class CartViewModel
     {
-        public IEnumerable<Product> Products { get; set; } = null!;
+        public IEnumerable<ProductInCart> Products { get; set; } = null!;
         public decimal? Total { get; set; }
         public int? ProductCounter { get; set; }
     }

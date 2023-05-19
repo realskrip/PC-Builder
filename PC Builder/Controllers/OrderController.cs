@@ -60,7 +60,7 @@ namespace PC_Builder.Controllers
         public IActionResult Order()
         {
             string productsToJSON;
-            List<Product> products = db.Products.Where(u => u.UserLogin == HttpContext.User.Identity.Name).ToList();
+            List<ProductInCart> products = db.ProductsInCart.Where(u => u.UserLogin == HttpContext.User.Identity.Name).ToList();
             User? userProfile = db.Users.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
             ContactDetails? userContactDetails = db.contactDetails.FirstOrDefault(u => u.Login == HttpContext.User.Identity.Name);
             Order order = new Order();
@@ -84,7 +84,7 @@ namespace PC_Builder.Controllers
 
             foreach (var item in products)
             {
-                db.Products.Remove(item);
+                db.ProductsInCart.Remove(item);
             }
 
             db.SaveChanges();

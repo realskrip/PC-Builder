@@ -18,9 +18,9 @@ namespace PC_Builder.Controllers
         public IActionResult AddCart(string name, decimal price, string category)
         {
             bool counterUpdated = false;
-            List<Product> productsInCart = db.Products.ToList();
+            List<ProductInCart> productsInCart = db.ProductsInCart.ToList();
 
-            Product product = new Product();
+            ProductInCart product = new ProductInCart();
 
             if (productsInCart.Count != 0)
             {
@@ -31,7 +31,7 @@ namespace PC_Builder.Controllers
                         item.ProductCounter++;
                         item.Subtotal = item.Price * item.ProductCounter;
 
-                        db.Products.Update(item);
+                        db.ProductsInCart.Update(item);
 
                         counterUpdated = true;
                         break;
@@ -48,7 +48,7 @@ namespace PC_Builder.Controllers
                 product.Category = category;
                 product.UserLogin = HttpContext.User.Identity.Name;
 
-                db.Products.Add(product);
+                db.ProductsInCart.Add(product);
             }
 
             db.SaveChanges();
@@ -61,9 +61,9 @@ namespace PC_Builder.Controllers
         public IActionResult ShowCart()
         {
             decimal? total = 0;
-            IOrderedEnumerable<Product>? result;
+            IOrderedEnumerable<ProductInCart>? result;
 
-            List<Product> products = db.Products.Where(u => u.UserLogin == HttpContext.User.Identity.Name).ToList();
+            List<ProductInCart> products = db.ProductsInCart.Where(u => u.UserLogin == HttpContext.User.Identity.Name).ToList();
 
             string? sortOrder = Request.Cookies["sortOrder"];
 
@@ -145,11 +145,11 @@ namespace PC_Builder.Controllers
         {
             if (ProductId != null)
             {
-                Product? product = db.Products.FirstOrDefault(p => p.ProductId == ProductId);
+                ProductInCart? product = db.ProductsInCart.FirstOrDefault(p => p.ProductId == ProductId);
 
                 if (product != null)
                 {
-                    db.Products.Remove(product);
+                    db.ProductsInCart.Remove(product);
                     db.SaveChanges();
                 }
             }
@@ -159,13 +159,13 @@ namespace PC_Builder.Controllers
         [HttpPost]
         public IActionResult PlusItem(Guid ProductId)
         {
-            Product? product = db.Products.FirstOrDefault(p => p.ProductId == ProductId);
+            ProductInCart? product = db.ProductsInCart.FirstOrDefault(p => p.ProductId == ProductId);
 
             if (product != null)
             {
                 product.ProductCounter++;
                 product.Subtotal = product.ProductCounter * product.Price;
-                db.Products.Update(product);
+                db.ProductsInCart.Update(product);
                 db.SaveChanges();
             }
 
@@ -175,17 +175,17 @@ namespace PC_Builder.Controllers
         [HttpPost]
         public IActionResult MinusItem(Guid ProductId)
         {
-            Product? product = db.Products.FirstOrDefault(p => p.ProductId == ProductId);
+            ProductInCart? product = db.ProductsInCart.FirstOrDefault(p => p.ProductId == ProductId);
 
             if (product != null)
             {
                 product.ProductCounter--;
                 product.Subtotal = product.ProductCounter * product.Price;
-                db.Products.Update(product);
+                db.ProductsInCart.Update(product);
 
                 if (product.ProductCounter == 0)
                 {
-                    db.Products.Remove(product);
+                    db.ProductsInCart.Remove(product);
                 }
 
                 db.SaveChanges();

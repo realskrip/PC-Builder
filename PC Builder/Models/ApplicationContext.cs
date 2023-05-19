@@ -13,7 +13,7 @@ namespace PC_Builder.Models
         public DbSet<DataStorage> DataStorages { get; set; } = null!;
         public DbSet<Case> Cases { get; set; } = null!;
         public DbSet<PowerSupply> PowerSupplies { get; set; } = null!;
-        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductInCart> ProductsInCart { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<ContactDetails> contactDetails { get; set; } 
